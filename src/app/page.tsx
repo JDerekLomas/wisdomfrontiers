@@ -4,50 +4,50 @@ const team = [
   {
     name: "Albert Lin",
     photo: "/team/albert-lin.jpg",
-    title: "National Geographic Explorer & Archaeologist",
-    bio: "Research scientist at UC San Diego and founding director of the Center for Human Frontiers. Uses LIDAR, satellite imaging, and AI to reveal lost civilizations — from the tomb of Genghis Khan to buried Maya cities. Hosts Lost Cities with Albert Lin on National Geographic. After losing his leg in 2016, returned to the field and launched Project Lim[b]itless to make prosthetics accessible worldwide.",
+    title: "National Geographic Explorer & Scientist",
+    bio: "Founding director of the Center for Human Frontiers at UC San Diego. Uses LIDAR, satellite imaging, and AI to reveal lost civilizations. After losing his leg in 2016, returned to the field and launched Project Lim[b]itless to make prosthetics accessible worldwide.",
     url: "https://exploreralbert.com",
   },
   {
     name: "Leo Trottier",
     photo: "/team/leo-trottier.webp",
     title: "Cognitive Scientist & Founder, FluentPet",
-    bio: "Founded CleverPet and FluentPet, pioneering technology for studying and enhancing animal cognition and interspecies communication. Co-directs the They Can Talk Research Initiative, the world's largest study of button-based communication in animals. Trained in cognitive science and AI at the University of Toronto and UC San Diego.",
+    bio: "Founded CleverPet and FluentPet, pioneering technology for studying animal cognition and interspecies communication. Co-directs the They Can Talk Research Initiative, the world's largest study of augmented animal communication.",
     url: "https://fluent.pet",
   },
   {
     name: "Tim Mullen",
     photo: "/team/tim-mullen.jpg",
     title: "Computational Neuroscientist & Entrepreneur",
-    bio: "Founded Intheon, the first platform for real-time brain-computer interface analytics, and co-founded Sanmai, developing non-invasive focused ultrasound treatments for mental health. Holds a Ph.D. from UC San Diego's Swartz Center for Computational Neuroscience. Created widely-used open-source neurotech tools including SIFT and the Lab Streaming Layer.",
+    bio: "Founded Intheon, the first platform for real-time brain-computer interface analytics, and co-founded Sanmai for non-invasive focused ultrasound treatments. Created widely-used open-source neurotech tools. Ph.D. from UC San Diego.",
     url: "https://intheon.io",
   },
   {
     name: "Eli Spencer",
     photo: "/team/eli-spencer.webp",
     title: "Physician-Scientist, UC San Diego",
-    bio: "Associate Professor of Medicine at UC San Diego, directing the Center for Health Design at the Design Lab and the Distributed Health Lab at the Qualcomm Institute. Focuses on democratizing diagnostics and digital health tools in resource-limited settings across the Americas, Africa, and beyond. Board-certified in internal medicine and infectious diseases.",
+    bio: "Associate Professor of Medicine at UC San Diego. Directs the Center for Health Design and the Distributed Health Lab at the Qualcomm Institute. Builds diagnostic and digital health tools for resource-limited settings across the Americas and Africa.",
     url: "https://profiles.ucsd.edu/eliah.aronoff-spencer",
   },
   {
     name: "Qasim Anwar",
     photo: "/team/qasim-anwar.png",
-    title: "Fashion Designer & Cultural Archaeologist",
-    bio: "Los Angeles-based designer and creative director working at the intersection of fashion and cultural preservation through a practice he calls Fashion Archeology. Founded Morni, a bespoke clothing platform bridging South Asian artisan craft with contemporary design. Co-created Color Coded Crime, a sustainable fashion label reviving Mughal-era textile traditions.",
+    title: "Designer & Cultural Archaeologist",
+    bio: "Works at the intersection of fashion and cultural preservation through a practice he calls Fashion Archeology. Founded Morni, a platform bridging South Asian artisan craft with contemporary design. Co-created Color Coded Crime, reviving Mughal-era textile traditions.",
     url: "https://mymorni.com",
   },
   {
     name: "Derek Lomas",
     photo: "/team/derek-lomas.webp",
     title: "Professor of Positive AI, TU Delft",
-    bio: "Researches AI systems designed to maximize wellbeing in education and healthcare at Delft University of Technology. Co-founded Playpower Labs and NeuroUX, creating AI-based educational software and cognitive assessments reaching millions of learners. Degrees from Yale, UC San Diego, and Carnegie Mellon.",
+    bio: "Researches AI systems designed to maximize wellbeing in education and healthcare at Delft University of Technology. Co-founded Playpower Labs and NeuroUX, building educational software and cognitive assessments reaching millions of learners.",
     url: "https://www.derek-lomas.com",
   },
   {
     name: "Luke Barrington",
     photo: "/team/luke-barrington.jpg",
     title: "Director, Google Earth AI",
-    bio: "Leads geospatial AI at Google, building models that turn satellite imagery into actionable intelligence for weather forecasting, disaster response, and environmental monitoring. Co-founded Tomnod, a citizen science platform that engaged millions of volunteers to analyze satellite images — from searching for Genghis Khan's tomb to mapping disaster zones. Ph.D. from UC San Diego.",
+    bio: "Leads geospatial AI at Google, turning satellite imagery into actionable intelligence for weather, disaster response, and environmental monitoring. Co-founded Tomnod, engaging millions of citizen scientists. Ph.D. from UC San Diego.",
     url: "https://www.linkedin.com/in/lukebarrington/",
   },
 ];
@@ -56,16 +56,16 @@ const projects = [
   {
     name: "Source Library",
     url: "https://sourcelibrary.org",
-    tagline: "Ancient texts, digitally alive",
+    tagline: "Wisdom infrastructure for the AI age",
     description:
-      "A living digital archive making foundational texts from ancient traditions accessible, searchable, and citable — from Renaissance herbals to alchemical manuscripts to classical philosophy.",
+      "Making humanity's deepest thinking — on medicine, ethics, the mind, the cosmos — machine-readable and citable. A knowledge base that gives AI systems access to thousands of years of insight, not just the last ten.",
   },
   {
     name: "Impact Edu",
     url: "https://impact-edu.ai",
-    tagline: "AI-powered open education",
+    tagline: "Measuring what matters in learning",
     description:
-      "Educational tools built on open learning standards, connecting modern AI assessment with deeper traditions of understanding how knowledge develops in learners.",
+      "Open-source AI tools built on learning science, not engagement metrics. Designed to support the development of capable, curious, ethical humans — not just higher test scores.",
   },
 ];
 
@@ -100,7 +100,6 @@ export default function Home() {
 
       {/* Hero */}
       <section className="relative pt-32 pb-20 px-6 overflow-hidden">
-        {/* Subtle gradient glow */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[600px] bg-amber-600/5 rounded-full blur-3xl pointer-events-none" />
 
         <div className="relative max-w-4xl mx-auto text-center">
@@ -108,14 +107,20 @@ export default function Home() {
             501(c)(3) Nonprofit
           </p>
           <h1 className="font-[family-name:var(--font-garamond)] text-5xl sm:text-7xl lg:text-8xl leading-[0.95] tracking-tight text-stone-100 mb-10">
-            Ancient knowledge.
+            AI is transforming
             <br />
-            <span className="text-amber-500">Human frontiers.</span>
+            everything.{" "}
+            <span className="text-amber-500">
+              Who&apos;s asking
+              <br />
+              what for?
+            </span>
           </h1>
           <p className="text-lg sm:text-xl leading-relaxed text-stone-400 max-w-2xl mx-auto">
-            We ensure that the deep knowledge of past civilizations not only
-            survives, but actively shapes the design of future technologies,
-            environments, and human connection.
+            We&apos;re building faster than we&apos;re thinking. Wisdom
+            Frontiers supports human development and flourishing in an age of
+            AI — grounded in the deepest traditions of knowledge about what it
+            means to live well.
           </p>
         </div>
       </section>
@@ -125,44 +130,71 @@ export default function Home() {
         <div className="border-t border-stone-800/60" />
       </div>
 
-      {/* Mission */}
+      {/* Urgency / Mission */}
       <section id="mission" className="py-24 px-6">
         <div className="max-w-4xl mx-auto">
           <p className="text-xs font-medium uppercase tracking-[0.3em] text-stone-600 mb-10">
-            The Mission
+            The Problem
           </p>
           <div className="grid md:grid-cols-2 gap-12">
-            <div>
-              <blockquote className="font-[family-name:var(--font-garamond)] text-2xl sm:text-3xl leading-snug text-stone-200 border-l-2 border-amber-600 pl-6">
-                To ensure that ancient knowledge not only survives, but actively
-                shapes the design of future technologies, environments, and
-                human connection.
-              </blockquote>
-            </div>
-            <div className="space-y-5 text-stone-400 leading-relaxed">
-              <p>
-                Across every culture and era, humans have built systems of
-                knowledge — about medicine, materials, the mind, the cosmos.
-                Most of it remains buried in archives, untranslated, unsearchable,
-                disconnected from the tools we build today.
+            <div className="space-y-8">
+              <p className="font-[family-name:var(--font-garamond)] text-2xl sm:text-3xl leading-snug text-stone-200">
+                AI systems are being designed to optimize engagement, productivity,
+                and profit. Almost none are designed to support human flourishing.
               </p>
-              <p>
-                We build open-source infrastructure to surface this knowledge
-                and connect it to modern science, education, and technology
-                design. Our team spans exploration, neuroscience, AI, medicine,
-                and design — united by the conviction that the frontier ahead
-                requires the wisdom behind.
+              <p className="text-stone-400 leading-relaxed">
+                The question isn&apos;t whether AI will reshape education, healthcare,
+                and how we relate to each other. It&apos;s whether anyone building
+                these systems is drawing on humanity&apos;s accumulated wisdom about
+                what actually makes people thrive.
+              </p>
+            </div>
+            <div className="space-y-8">
+              <blockquote className="border-l-2 border-amber-600 pl-6">
+                <p className="font-[family-name:var(--font-garamond)] text-xl text-stone-300 italic leading-relaxed">
+                  &ldquo;Educating the mind without educating the heart is no
+                  education at all.&rdquo;
+                </p>
+                <cite className="block mt-3 text-sm text-stone-500 not-italic">
+                  Aristotle
+                </cite>
+              </blockquote>
+              <p className="text-stone-400 leading-relaxed">
+                For thousands of years, thinkers across every civilization have
+                studied what it means to develop fully as a human being — how to
+                cultivate judgment, character, and purpose. That knowledge exists.
+                It&apos;s just not connected to the systems being built right now.
+              </p>
+              <p className="text-stone-400 leading-relaxed font-medium text-stone-300">
+                We connect it.
               </p>
             </div>
           </div>
         </div>
       </section>
 
+      {/* Quote break */}
+      <div className="py-16 px-6">
+        <div className="max-w-3xl mx-auto text-center">
+          <blockquote className="font-[family-name:var(--font-garamond)] text-2xl sm:text-3xl text-stone-300 italic leading-relaxed">
+            &ldquo;Begin at once to live, and count each separate day as a
+            separate life.&rdquo;
+          </blockquote>
+          <cite className="block mt-4 text-sm text-stone-600 not-italic">
+            Seneca, <span className="italic">Letters to Lucilius</span>
+          </cite>
+        </div>
+      </div>
+
       {/* Projects */}
       <section id="projects" className="py-24 px-6">
         <div className="max-w-6xl mx-auto">
-          <p className="text-xs font-medium uppercase tracking-[0.3em] text-stone-600 mb-12">
-            Projects
+          <p className="text-xs font-medium uppercase tracking-[0.3em] text-stone-600 mb-4">
+            What We Build
+          </p>
+          <p className="font-[family-name:var(--font-garamond)] text-2xl text-stone-300 mb-12 max-w-xl">
+            Open-source tools that put wisdom traditions in conversation with
+            AI systems.
           </p>
           <div className="grid md:grid-cols-2 gap-6">
             {projects.map((project) => (
@@ -198,8 +230,8 @@ export default function Home() {
             The Team
           </p>
           <p className="font-[family-name:var(--font-garamond)] text-2xl text-stone-300 mb-16 max-w-xl">
-            Explorers, scientists, designers, and builders working at the edge
-            of what&apos;s known.
+            Scientists, explorers, designers, and builders — united by the
+            conviction that what we optimize for matters.
           </p>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-14">
@@ -233,6 +265,19 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Closing quote */}
+      <div className="py-16 px-6 border-t border-stone-800/60">
+        <div className="max-w-3xl mx-auto text-center">
+          <blockquote className="font-[family-name:var(--font-garamond)] text-2xl sm:text-3xl text-stone-300 italic leading-relaxed">
+            &ldquo;The habits we form from childhood make no small difference,
+            but rather they make all the difference.&rdquo;
+          </blockquote>
+          <cite className="block mt-4 text-sm text-stone-600 not-italic">
+            Aristotle, <span className="italic">Nicomachean Ethics</span>
+          </cite>
+        </div>
+      </div>
 
       {/* Footer */}
       <footer className="border-t border-stone-800/60 py-12 px-6">
