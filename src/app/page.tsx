@@ -4,50 +4,50 @@ const team = [
   {
     name: "Albert Lin",
     photo: "/team/albert-lin.jpg",
-    title: "National Geographic Explorer & Scientist",
-    bio: "Founding director of the Center for Human Frontiers at UC San Diego. Uses LIDAR, satellite imaging, and AI to reveal lost civilizations. After losing his leg in 2016, returned to the field and launched Project Lim[b]itless to make prosthetics accessible worldwide.",
+    title: "National Geographic Explorer",
+    bio: "Founding director of the Center for Human Frontiers at UC San Diego. Uses LIDAR, satellite imaging, and AI to reveal lost civilizations. Returned to the field after losing his leg in 2016 and launched Project Lim[b]itless to make prosthetics accessible worldwide.",
     url: "https://exploreralbert.com",
   },
   {
     name: "Leo Trottier",
     photo: "/team/leo-trottier.webp",
     title: "Cognitive Scientist & Founder, FluentPet",
-    bio: "Founded CleverPet and FluentPet, pioneering technology for studying animal cognition and interspecies communication. Co-directs the They Can Talk Research Initiative, the world's largest study of augmented animal communication.",
+    bio: "Founded CleverPet and FluentPet, pioneering technology for interspecies communication. Co-directs the They Can Talk Research Initiative, the world's largest study of augmented animal communication.",
     url: "https://fluent.pet",
   },
   {
     name: "Tim Mullen",
     photo: "/team/tim-mullen.jpg",
-    title: "Computational Neuroscientist & Entrepreneur",
-    bio: "Founded Intheon, the first platform for real-time brain-computer interface analytics, and co-founded Sanmai for non-invasive focused ultrasound treatments. Created widely-used open-source neurotech tools. Ph.D. from UC San Diego.",
+    title: "Neuroscientist & Entrepreneur",
+    bio: "Founded Intheon, the first real-time brain-computer interface platform, and co-founded Sanmai for non-invasive focused ultrasound therapies. Created open-source neurotech tools used worldwide. Ph.D. from UC San Diego.",
     url: "https://intheon.io",
   },
   {
     name: "Eli Spencer",
     photo: "/team/eli-spencer.webp",
     title: "Physician-Scientist, UC San Diego",
-    bio: "Associate Professor of Medicine at UC San Diego. Directs the Center for Health Design and the Distributed Health Lab at the Qualcomm Institute. Builds diagnostic and digital health tools for resource-limited settings across the Americas and Africa.",
+    bio: "Directs the Center for Health Design and the Distributed Health Lab at UC San Diego. Builds diagnostic and digital health tools for resource-limited settings across the Americas and Africa.",
     url: "https://profiles.ucsd.edu/eliah.aronoff-spencer",
   },
   {
     name: "Qasim Anwar",
     photo: "/team/qasim-anwar.png",
     title: "Designer & Cultural Archaeologist",
-    bio: "Works at the intersection of fashion and cultural preservation through a practice he calls Fashion Archeology. Founded Morni, a platform bridging South Asian artisan craft with contemporary design. Co-created Color Coded Crime, reviving Mughal-era textile traditions.",
+    bio: "Works at the intersection of fashion and cultural preservation through Fashion Archeology. Founded Morni, bridging South Asian artisan craft with contemporary design. Co-created Color Coded Crime, reviving Mughal-era textile traditions.",
     url: "https://mymorni.com",
   },
   {
     name: "Derek Lomas",
     photo: "/team/derek-lomas.webp",
     title: "Professor of Positive AI, TU Delft",
-    bio: "Researches AI systems designed to maximize wellbeing in education and healthcare at Delft University of Technology. Co-founded Playpower Labs and NeuroUX, building educational software and cognitive assessments reaching millions of learners.",
+    bio: "Researches AI systems that maximize wellbeing in education and healthcare at Delft University of Technology. Co-founded Playpower Labs and NeuroUX, building educational tools reaching millions of learners.",
     url: "https://www.derek-lomas.com",
   },
   {
     name: "Luke Barrington",
     photo: "/team/luke-barrington.jpg",
     title: "Director, Google Earth AI",
-    bio: "Leads geospatial AI at Google, turning satellite imagery into actionable intelligence for weather, disaster response, and environmental monitoring. Co-founded Tomnod, engaging millions of citizen scientists. Ph.D. from UC San Diego.",
+    bio: "Leads geospatial AI at Google — weather forecasting, disaster response, environmental monitoring. Co-founded Tomnod, engaging millions of citizen scientists to map the world. Ph.D. from UC San Diego.",
     url: "https://www.linkedin.com/in/lukebarrington/",
   },
 ];
@@ -56,16 +56,16 @@ const projects = [
   {
     name: "Source Library",
     url: "https://sourcelibrary.org",
-    tagline: "Wisdom infrastructure for the AI age",
+    tagline: "The knowledge base",
     description:
-      "Making humanity's deepest thinking — on medicine, ethics, the mind, the cosmos — machine-readable and citable. A knowledge base that gives AI systems access to thousands of years of insight, not just the last ten.",
+      "Thousands of years of human insight into medicine, ethics, the mind, and the natural world — digitized, searchable, and structured for both human readers and AI systems. The foundation everything else builds on.",
   },
   {
     name: "Impact Edu",
     url: "https://impact-edu.ai",
-    tagline: "Measuring what matters in learning",
+    tagline: "The tools",
     description:
-      "Open-source AI tools built on learning science, not engagement metrics. Designed to support the development of capable, curious, ethical humans — not just higher test scores.",
+      "Open-source AI for education grounded in learning science. Designed to develop capable, curious, whole human beings — and to measure whether that's actually happening.",
   },
 ];
 
@@ -80,10 +80,10 @@ export default function Home() {
           </span>
           <div className="flex gap-6 text-sm text-stone-500">
             <a
-              href="#mission"
+              href="#about"
               className="hover:text-amber-500 transition-colors"
             >
-              Mission
+              About
             </a>
             <a
               href="#projects"
@@ -99,102 +99,74 @@ export default function Home() {
       </nav>
 
       {/* Hero */}
-      <section className="relative pt-32 pb-20 px-6 overflow-hidden">
+      <section className="relative pt-36 pb-24 px-6 overflow-hidden">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[600px] bg-amber-600/5 rounded-full blur-3xl pointer-events-none" />
 
-        <div className="relative max-w-4xl mx-auto text-center">
-          <p className="text-sm font-medium uppercase tracking-[0.3em] text-amber-600 mb-8">
-            501(c)(3) Nonprofit
-          </p>
+        <div className="relative max-w-4xl mx-auto">
           <h1 className="font-[family-name:var(--font-garamond)] text-5xl sm:text-7xl lg:text-8xl leading-[0.95] tracking-tight text-stone-100 mb-10">
-            AI is transforming
+            Technology that serves
             <br />
-            everything.{" "}
-            <span className="text-amber-500">
-              Who&apos;s asking
-              <br />
-              what for?
-            </span>
+            <span className="text-amber-500">human flourishing.</span>
           </h1>
-          <p className="text-lg sm:text-xl leading-relaxed text-stone-400 max-w-2xl mx-auto">
-            We&apos;re building faster than we&apos;re thinking. Wisdom
-            Frontiers supports human development and flourishing in an age of
-            AI — grounded in the deepest traditions of knowledge about what it
-            means to live well.
+          <p className="text-lg sm:text-xl leading-relaxed text-stone-400 max-w-2xl">
+            Wisdom Frontiers builds open tools and public knowledge
+            infrastructure for human development — drawing on the deepest
+            traditions of understanding what it means to thrive.
           </p>
         </div>
       </section>
 
-      {/* Divider */}
-      <div className="max-w-6xl mx-auto px-6">
-        <div className="border-t border-stone-800/60" />
-      </div>
-
-      {/* Urgency / Mission */}
-      <section id="mission" className="py-24 px-6">
+      {/* About */}
+      <section id="about" className="py-24 px-6 border-t border-stone-800/60">
         <div className="max-w-4xl mx-auto">
-          <p className="text-xs font-medium uppercase tracking-[0.3em] text-stone-600 mb-10">
-            The Problem
-          </p>
-          <div className="grid md:grid-cols-2 gap-12">
-            <div className="space-y-8">
-              <p className="font-[family-name:var(--font-garamond)] text-2xl sm:text-3xl leading-snug text-stone-200">
-                AI systems are being designed to optimize engagement, productivity,
-                and profit. Almost none are designed to support human flourishing.
+          <div className="grid md:grid-cols-5 gap-12">
+            <div className="md:col-span-2">
+              <p className="text-xs font-medium uppercase tracking-[0.3em] text-stone-600 mb-6">
+                Why This Exists
               </p>
-              <p className="text-stone-400 leading-relaxed">
-                The question isn&apos;t whether AI will reshape education, healthcare,
-                and how we relate to each other. It&apos;s whether anyone building
-                these systems is drawing on humanity&apos;s accumulated wisdom about
-                what actually makes people thrive.
-              </p>
-            </div>
-            <div className="space-y-8">
-              <blockquote className="border-l-2 border-amber-600 pl-6">
-                <p className="font-[family-name:var(--font-garamond)] text-xl text-stone-300 italic leading-relaxed">
-                  &ldquo;Educating the mind without educating the heart is no
-                  education at all.&rdquo;
-                </p>
-                <cite className="block mt-3 text-sm text-stone-500 not-italic">
-                  Aristotle
-                </cite>
+              <blockquote className="font-[family-name:var(--font-garamond)] text-xl text-stone-300 italic leading-relaxed border-l-2 border-amber-600 pl-5">
+                &ldquo;The habits we form make no small difference — they make
+                all the difference.&rdquo;
               </blockquote>
-              <p className="text-stone-400 leading-relaxed">
-                For thousands of years, thinkers across every civilization have
-                studied what it means to develop fully as a human being — how to
-                cultivate judgment, character, and purpose. That knowledge exists.
-                It&apos;s just not connected to the systems being built right now.
+              <cite className="block mt-3 text-sm text-stone-600 not-italic pl-5">
+                Aristotle
+              </cite>
+            </div>
+            <div className="md:col-span-3 space-y-6 text-stone-400 leading-relaxed">
+              <p className="text-stone-200 text-lg">
+                Every generation faces the question of how to raise its children,
+                care for its people, and build a good society. Ours faces it at
+                a moment when the tools are changing faster than our understanding
+                of what they should be used for.
               </p>
-              <p className="text-stone-400 leading-relaxed font-medium text-stone-300">
-                We connect it.
+              <p>
+                Wisdom Frontiers is a 501(c)(3) nonprofit that supports the
+                people and projects working to ensure technology serves human
+                development. We digitize and structure humanity&apos;s deepest
+                knowledge about flourishing. We build AI tools grounded in
+                learning science. We fund work at the intersection of ancient
+                insight and modern capability.
+              </p>
+              <p>
+                Our conviction is simple: the knowledge already exists. Across
+                thousands of years and every civilization, humans have thought
+                carefully about what it takes to develop well — as individuals,
+                as communities, as a species. That knowledge should be shaping
+                the systems we build today. We make sure it does.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Quote break */}
-      <div className="py-16 px-6">
-        <div className="max-w-3xl mx-auto text-center">
-          <blockquote className="font-[family-name:var(--font-garamond)] text-2xl sm:text-3xl text-stone-300 italic leading-relaxed">
-            &ldquo;Begin at once to live, and count each separate day as a
-            separate life.&rdquo;
-          </blockquote>
-          <cite className="block mt-4 text-sm text-stone-600 not-italic">
-            Seneca, <span className="italic">Letters to Lucilius</span>
-          </cite>
-        </div>
-      </div>
-
       {/* Projects */}
-      <section id="projects" className="py-24 px-6">
+      <section
+        id="projects"
+        className="py-24 px-6 border-t border-stone-800/60"
+      >
         <div className="max-w-6xl mx-auto">
-          <p className="text-xs font-medium uppercase tracking-[0.3em] text-stone-600 mb-4">
-            What We Build
-          </p>
-          <p className="font-[family-name:var(--font-garamond)] text-2xl text-stone-300 mb-12 max-w-xl">
-            Open-source tools that put wisdom traditions in conversation with
-            AI systems.
+          <p className="text-xs font-medium uppercase tracking-[0.3em] text-stone-600 mb-12">
+            Projects
           </p>
           <div className="grid md:grid-cols-2 gap-6">
             {projects.map((project) => (
@@ -224,14 +196,15 @@ export default function Home() {
       </section>
 
       {/* Team */}
-      <section id="team" className="py-24 px-6">
+      <section id="team" className="py-24 px-6 border-t border-stone-800/60">
         <div className="max-w-6xl mx-auto">
           <p className="text-xs font-medium uppercase tracking-[0.3em] text-stone-600 mb-4">
-            The Team
+            Board of Directors
           </p>
-          <p className="font-[family-name:var(--font-garamond)] text-2xl text-stone-300 mb-16 max-w-xl">
-            Scientists, explorers, designers, and builders — united by the
-            conviction that what we optimize for matters.
+          <p className="font-[family-name:var(--font-garamond)] text-2xl text-stone-300 mb-16 max-w-2xl">
+            Explorers, neuroscientists, physicians, designers, and AI
+            researchers — each building technology that expands what humans
+            can do and be.
           </p>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-14">
@@ -266,19 +239,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Closing quote */}
-      <div className="py-16 px-6 border-t border-stone-800/60">
-        <div className="max-w-3xl mx-auto text-center">
-          <blockquote className="font-[family-name:var(--font-garamond)] text-2xl sm:text-3xl text-stone-300 italic leading-relaxed">
-            &ldquo;The habits we form from childhood make no small difference,
-            but rather they make all the difference.&rdquo;
-          </blockquote>
-          <cite className="block mt-4 text-sm text-stone-600 not-italic">
-            Aristotle, <span className="italic">Nicomachean Ethics</span>
-          </cite>
-        </div>
-      </div>
-
       {/* Footer */}
       <footer className="border-t border-stone-800/60 py-12 px-6">
         <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
@@ -286,8 +246,7 @@ export default function Home() {
             <span className="font-[family-name:var(--font-garamond)] text-stone-400">
               Wisdom Frontiers
             </span>{" "}
-            &middot; 501(c)(3) Nonprofit Public Benefit Corporation &middot;
-            San Francisco, CA
+            &middot; 501(c)(3) Nonprofit &middot; San Francisco
           </div>
           <div className="flex gap-4 text-sm text-stone-600">
             <a
