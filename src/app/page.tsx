@@ -126,21 +126,22 @@ export default function Home() {
                 Why This Exists
               </p>
               <a
-                href="https://sourcelibrary.org/q/BcmVm43Y1o4Nfz7FDaI"
+                href="https://sourcelibrary.org/q/BejYYaJPyv8qBuoAqAs"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block border-l-2 border-amber-600 pl-5 hover:border-amber-400 transition-colors group"
               >
                 <blockquote className="font-[family-name:var(--font-garamond)] text-xl text-stone-300 italic leading-relaxed group-hover:text-stone-200 transition-colors">
-                  &ldquo;You, to whom a portion of Mind has been granted —
-                  recognize your own kind, and contemplate your immortal
-                  nature.&rdquo;
+                  &ldquo;We give to you, O Adam, no fixed place, nor a
+                  definite form, nor any specific duty, so that you may have
+                  whatever place, whatever face, and whatever duty you
+                  desire, according to your own will and decision.&rdquo;
                 </blockquote>
                 <cite className="block mt-3 text-sm text-stone-600 not-italic group-hover:text-amber-600 transition-colors">
-                  Hermes Trismegistus, trans. Marsilio Ficino
+                  Giovanni Pico della Mirandola
                   <br />
                   <span className="text-stone-700 group-hover:text-stone-500">
-                    Pymander, 1532 — sourcelibrary.org
+                    Oration on the Dignity of Man, 1486 — sourcelibrary.org
                   </span>
                 </cite>
               </a>
