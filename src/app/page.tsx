@@ -106,7 +106,7 @@ export default function Home() {
           <h1 className="font-[family-name:var(--font-garamond)] text-5xl sm:text-7xl lg:text-8xl leading-[0.95] tracking-tight text-stone-100 mb-10">
             Using ancient wisdom
             <br />
-            to design a{" "}
+            for a{" "}
             <span className="text-amber-500">humanistic future.</span>
           </h1>
           <p className="text-lg sm:text-xl leading-relaxed text-stone-400 max-w-2xl">
@@ -126,20 +126,21 @@ export default function Home() {
                 Why This Exists
               </p>
               <a
-                href="https://sourcelibrary.org/q/BY5mnGJwKrFcXlv9BHK"
+                href="https://sourcelibrary.org/q/BcmVm43Y1o4Nfz7FDaI"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block border-l-2 border-amber-600 pl-5 hover:border-amber-400 transition-colors group"
               >
                 <blockquote className="font-[family-name:var(--font-garamond)] text-xl text-stone-300 italic leading-relaxed group-hover:text-stone-200 transition-colors">
-                  &ldquo;The soul is nourished by the contemplation of truth,
-                  and it rejoices.&rdquo;
+                  &ldquo;You, to whom a portion of Mind has been granted —
+                  recognize your own kind, and contemplate your immortal
+                  nature.&rdquo;
                 </blockquote>
                 <cite className="block mt-3 text-sm text-stone-600 not-italic group-hover:text-amber-600 transition-colors">
-                  Plato, via Marsilio Ficino
+                  Hermes Trismegistus, trans. Marsilio Ficino
                   <br />
                   <span className="text-stone-700 group-hover:text-stone-500">
-                    De Voluptate, 1497 — sourcelibrary.org
+                    Pymander, 1532 — sourcelibrary.org
                   </span>
                 </cite>
               </a>
