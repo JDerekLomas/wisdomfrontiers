@@ -12,6 +12,8 @@
   --color-stone-800: #292524;
   --color-stone-900: #1c1917;
   --color-stone-950: #0c0a09;
+  --color-amber-400: #fbbf24;
+  --color-amber-500: #f59e0b;
   --color-amber-600: #d97706;
   --color-amber-700: #b45309;
   --font-sans: var(--font-geist-sans);
@@ -19,15 +21,11 @@
 }
 
 body {
-  background: #fafaf9;
-  color: #1c1917;
+  background: #0c0a09;
+  color: #e7e5e4;
   font-family: var(--font-sans), system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-.font-serif {
-  font-family: "EB Garamond", "Georgia", "Times New Roman", serif;
 }
 
 ::selection {
