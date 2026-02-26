@@ -132,10 +132,9 @@ export default function Home() {
                 className="block border-l-2 border-amber-600 pl-5 hover:border-amber-400 transition-colors group"
               >
                 <blockquote className="font-[family-name:var(--font-garamond)] text-xl text-stone-300 italic leading-relaxed group-hover:text-stone-200 transition-colors">
-                  &ldquo;We give to you, O Adam, no fixed place, nor a
-                  definite form, nor any specific duty, so that you may have
-                  whatever place, whatever face, and whatever duty you
-                  desire, according to your own will and decision.&rdquo;
+                  &ldquo;O, the highest and most wonderful happiness of man,
+                  to whom it is granted to possess what he chooses and to be
+                  what he wants!&rdquo;
                 </blockquote>
                 <cite className="block mt-3 text-sm text-stone-600 not-italic group-hover:text-amber-600 transition-colors">
                   Giovanni Pico della Mirandola
