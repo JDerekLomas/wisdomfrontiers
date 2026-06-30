@@ -13,13 +13,6 @@ const YELLOW = "#FFCB05"; // National Geographic-style signal yellow
 
 const team = [
   {
-    name: "Jamie Shadowlight",
-    photo: "/team/jamie-shadowlight.jpg",
-    title: "In memory · Violinist & Cymatics Artist",
-    bio: "A pioneering electric violinist who made the invisible visible — moving water with sound through her live cymatics performances. The harmonic center of our circle, and the light by which we navigate.",
-    url: "https://jamieshadowlight.org",
-  },
-  {
     name: "Albert Lin",
     photo: "/team/albert-lin.jpg",
     title: "National Geographic Explorer",
@@ -46,6 +39,13 @@ const team = [
     title: "Physician-Scientist, UC San Diego",
     bio: "Directs the Center for Health Design and the Distributed Health Lab at UC San Diego. Builds diagnostic and digital health tools for resource-limited settings across the Americas and Africa.",
     url: "https://profiles.ucsd.edu/eliah.aronoff-spencer",
+  },
+  {
+    name: "Jamie Shadowlight",
+    photo: "/team/jamie-shadowlight.jpg",
+    title: "In memory · Violinist & Cymatics Artist",
+    bio: "A pioneering electric violinist who made the invisible visible — moving water with sound through her live cymatics performances. The harmonic center of our circle, and the light by which we navigate.",
+    url: "https://jamieshadowlight.org",
   },
   {
     name: "Qasim Anwar",
