@@ -1,4 +1,15 @@
 import Image from "next/image";
+import { Archivo } from "next/font/google";
+
+// NatGeo "Geograph" stand-in: a geometric grotesque with heavy display weights.
+const archivo = Archivo({
+  subsets: ["latin"],
+  weight: ["500", "600", "700", "800", "900"],
+  variable: "--font-archivo",
+  display: "swap",
+});
+
+const YELLOW = "#FFCB05"; // National Geographic-style signal yellow
 
 const team = [
   {
@@ -59,106 +70,110 @@ const team = [
   },
 ];
 
-const projects = [
-  {
-    name: "Source Library",
-    url: "https://sourcelibrary.org",
-    tagline: "The flagship",
-    description:
-      "Thousands of primary sources across more than 100 languages — on medicine, ethics, the mind, and the natural world — many translated into English for the first time. Digitized, searchable, and structured for both human readers and AI. The foundation everything else builds on.",
-  },
-  {
-    name: "Impact Edu",
-    url: "https://impact-edu.ai",
-    tagline: "The tools",
-    description:
-      "Open-source AI for education grounded in learning science. Designed to develop capable, curious, whole human beings — and to measure whether that's actually happening.",
-  },
-];
+function Triangle({ className = "" }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 100 100" className={className} aria-hidden style={{ display: "block" }}>
+      <polygon points="50,6 95,94 5,94" fill={YELLOW} />
+    </svg>
+  );
+}
+
+function Caption({ children }: { children: React.ReactNode }) {
+  return (
+    <p className="flex items-center gap-2 text-[11px] uppercase tracking-[0.22em] text-stone-500">
+      <span
+        className="inline-block h-3 w-[3px]"
+        style={{ backgroundColor: YELLOW }}
+      />
+      {children}
+    </p>
+  );
+}
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-stone-950">
-      {/* Nav */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-stone-950/80 backdrop-blur-md border-b border-stone-800/50">
-        <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-          <span className="font-[family-name:var(--font-garamond)] text-lg tracking-wide text-stone-200">
-            Wisdom Frontiers
-          </span>
-          <div className="flex gap-6 text-sm text-stone-500">
-            <a
-              href="#about"
-              className="hover:text-amber-500 transition-colors"
+    <div
+      className={`${archivo.variable} min-h-screen bg-[#faf9f7] text-stone-900`}
+      style={{ fontFamily: "var(--font-geist-sans), system-ui, sans-serif" }}
+    >
+      {/* ============ HERO ============ */}
+      <section className="relative h-[92vh] min-h-[620px] w-full overflow-hidden bg-stone-900">
+        <Image
+          src="/explorer/ottoman-celestial.jpg"
+          alt="Ottoman celestial map, 1583"
+          fill
+          priority
+          className="object-cover object-center opacity-80"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-stone-950 via-stone-950/40 to-stone-950/30" />
+
+        <div className="relative z-10 flex h-full flex-col justify-between px-8 py-10 sm:px-14 sm:py-14">
+          {/* Wordmark */}
+          <div className="flex items-center gap-3">
+            <Triangle className="h-6 w-6" />
+            <span
+              className={`${archivo.className} text-sm font-800 uppercase tracking-[0.28em] text-white`}
+              style={{ fontWeight: 800 }}
             >
-              About
-            </a>
-            <a
-              href="#projects"
-              className="hover:text-amber-500 transition-colors"
-            >
-              Projects
-            </a>
-            <a href="#team" className="hover:text-amber-500 transition-colors">
-              Team
-            </a>
+              Wisdom Frontiers
+            </span>
           </div>
-        </div>
-      </nav>
 
-      {/* Hero */}
-      <section className="relative pt-36 pb-24 px-6 overflow-hidden">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[600px] bg-amber-600/5 rounded-full blur-3xl pointer-events-none" />
+          {/* Headline */}
+          <div className="max-w-4xl">
+            <p
+              className="mb-5 text-xs uppercase tracking-[0.3em]"
+              style={{ color: YELLOW }}
+            >
+              A society of explorers
+            </p>
+            <h1
+              className={`${archivo.className} text-5xl font-900 leading-[0.95] tracking-tight text-white sm:text-7xl lg:text-8xl`}
+              style={{ fontWeight: 900 }}
+            >
+              Real <span style={{ color: YELLOW }}>wisdom</span>
+              <br />
+              for artificial
+              <br />
+              intelligence.
+            </h1>
+            <p className="mt-7 max-w-xl text-base leading-relaxed text-stone-200 sm:text-lg">
+              Explorers, scientists, and artists asking how wisdom can guide
+              intelligence — human and artificial — toward the flourishing of
+              all life.
+            </p>
+          </div>
 
-        <div className="relative max-w-4xl mx-auto">
-          <h1 className="font-[family-name:var(--font-garamond)] text-5xl sm:text-7xl lg:text-8xl leading-[0.95] tracking-tight text-stone-100 mb-10">
-            Using ancient wisdom
-            <br />
-            for a{" "}
-            <span className="text-amber-500">humanistic future.</span>
-          </h1>
-          <p className="text-lg sm:text-xl leading-relaxed text-stone-400 max-w-2xl">
-            Wisdom Frontiers builds open knowledge and AI tools for human
-            flourishing in the age of artificial intelligence — drawing on the
-            deepest traditions of what it means to live well.
-          </p>
+          <div className="hidden sm:block">
+            <Caption>
+              <a
+                href="https://sourcelibrary.org/book/art-ottoman-celestial-map"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-stone-400 underline decoration-stone-600 underline-offset-2 hover:text-white"
+              >
+                Ottoman celestial map, 1583 · Source Library ↗
+              </a>
+            </Caption>
+          </div>
         </div>
       </section>
 
-      {/* About */}
-      <section id="about" className="py-24 px-6 border-t border-stone-800/60">
-        <div className="max-w-4xl mx-auto">
-          <div className="grid md:grid-cols-5 gap-12">
-            <div className="md:col-span-2">
-              <p className="text-xs font-medium uppercase tracking-[0.3em] text-stone-600 mb-6">
-                Why This Exists
-              </p>
-              <a
-                href="https://sourcelibrary.org/q/BejoAexWSSxTh76zhkm"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block border-l-2 border-amber-600 pl-5 hover:border-amber-400 transition-colors group"
-              >
-                <blockquote className="font-[family-name:var(--font-garamond)] text-xl text-stone-300 italic leading-relaxed group-hover:text-stone-200 transition-colors">
-                  &ldquo;O the highest and wonderful happiness of man! To whom
-                  it is granted to have what he chooses, to be what he
-                  wills.&rdquo;
-                </blockquote>
-                <cite className="block mt-3 text-sm text-stone-600 not-italic group-hover:text-amber-600 transition-colors">
-                  Giovanni Pico della Mirandola
-                  <br />
-                  <span className="text-stone-700 group-hover:text-stone-500">
-                    Oration on the Dignity of Man, 1486 — sourcelibrary.org
-                  </span>
-                </cite>
-              </a>
-            </div>
-            <div className="md:col-span-3 space-y-6 text-stone-400 leading-relaxed">
-              <p className="text-stone-200 text-lg">
-                We are living through the arrival of intelligence as capable as
-                our own. The question is no longer whether these tools will
-                reshape how we learn, heal, govern, and create — but whether the
-                wisdom to use them well arrives with them.
-              </p>
+      {/* ============ MISSION ============ */}
+      <section className="px-8 py-24 sm:px-14 sm:py-32">
+        <div className="mx-auto max-w-5xl">
+          <Caption>Why this exists</Caption>
+          <h2
+            className={`${archivo.className} mt-6 max-w-4xl text-3xl font-800 leading-[1.08] tracking-tight sm:text-5xl`}
+            style={{ fontWeight: 800 }}
+          >
+            We are living through the arrival of intelligence as capable as our
+            own. The question is whether the wisdom to use it well arrives with
+            it.
+          </h2>
+
+          <div className="mt-14 grid gap-12 md:grid-cols-5">
+            <div className="md:col-span-3 space-y-6 text-lg leading-relaxed text-stone-700">
               <p>
                 Wisdom Frontiers began as a circle of explorers, scientists,
                 artists, and builders who kept returning to one question: how do
@@ -168,79 +183,127 @@ export default function Home() {
                   href="https://sourcelibrary.org"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-stone-200 underline decoration-amber-700/60 underline-offset-4 hover:text-amber-400 transition-colors"
+                  className="font-medium underline decoration-2 underline-offset-4"
+                  style={{ textDecorationColor: YELLOW }}
                 >
                   Source Library
                 </a>{" "}
-                — a living archive of thousands of years of human insight, made
-                readable and citable for people and legible to machines.
+                — which we conceived and built into the world&apos;s largest
+                library of translated primary sources: thousands of years of
+                human insight, made readable and citable for people and legible
+                to machines.
               </p>
               <p>
-                What started as a shared conviction is now real. We conceived
-                and built Source Library into the world&apos;s largest library of
-                translated primary sources — thousands of works across more than
-                a hundred languages, many rendered into English for the first
-                time, and growing every week. It is the foundation we build
-                everything else
-                on: the knowledge already exists, and our work is to bring it
-                forward — so that the intelligent systems now being built help
-                each of us define our own purpose, not someone else&apos;s. We do
-                this for the generation that will inherit it. For the children.
+                The knowledge already exists. Across every civilization, humans
+                have thought carefully about what it takes to live well — to
+                become wiser, freer, and more whole. Our work is to bring it
+                forward, so that the intelligent systems now being built help
+                each of us define our own purpose, not someone else&apos;s. We
+                do this for the generation that will inherit it. For the
+                children.
               </p>
+            </div>
+
+            {/* Pull-quote */}
+            <div className="md:col-span-2">
+              <a
+                href="https://sourcelibrary.org/q/BejoAexWSSxTh76zhkm"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block pl-6"
+                style={{ borderLeft: `3px solid ${YELLOW}` }}
+              >
+                <blockquote
+                  className={`${archivo.className} text-xl font-600 leading-snug text-stone-900`}
+                  style={{ fontWeight: 600 }}
+                >
+                  &ldquo;O the highest and wonderful happiness of man! To whom it
+                  is granted to have what he chooses, to be what he wills.&rdquo;
+                </blockquote>
+                <cite className="mt-4 block text-xs uppercase not-italic tracking-[0.18em] text-stone-500">
+                  Pico della Mirandola
+                  <br />
+                  <span className="text-stone-400">
+                    Oration on the Dignity of Man, 1486
+                  </span>
+                </cite>
+              </a>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Projects */}
-      <section
-        id="projects"
-        className="py-24 px-6 border-t border-stone-800/60"
-      >
-        <div className="max-w-6xl mx-auto">
-          <p className="text-xs font-medium uppercase tracking-[0.3em] text-stone-600 mb-12">
-            Projects
-          </p>
-          <div className="grid md:grid-cols-2 gap-6">
-            {projects.map((project) => (
-              <a
-                key={project.name}
-                href={project.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group block rounded-lg border border-stone-800 bg-stone-900/50 p-8 hover:border-amber-700/50 hover:bg-stone-900 transition-all duration-300"
-              >
-                <p className="text-xs font-medium uppercase tracking-[0.2em] text-amber-600 mb-3">
-                  {project.tagline}
-                </p>
-                <h3 className="font-[family-name:var(--font-garamond)] text-3xl text-stone-100 mb-4 group-hover:text-amber-400 transition-colors">
-                  {project.name}
-                  <span className="inline-block ml-2 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300">
-                    &rarr;
-                  </span>
-                </h3>
-                <p className="text-stone-400 leading-relaxed">
-                  {project.description}
-                </p>
-              </a>
-            ))}
+      {/* ============ FLAGSHIP: SOURCE LIBRARY ============ */}
+      <section id="work" className="relative h-[80vh] min-h-[560px] w-full overflow-hidden bg-stone-900">
+        <Image
+          src="/explorer/argo-navis.jpg"
+          alt="Celestial chart of Argo Navis, the ship among the stars, 1602"
+          fill
+          className="object-cover object-center"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-stone-950/90 via-stone-950/55 to-transparent" />
+        <div className="relative z-10 flex h-full items-center px-8 sm:px-14">
+          <div className="max-w-xl">
+            <p
+              className="mb-4 text-xs uppercase tracking-[0.3em]"
+              style={{ color: YELLOW }}
+            >
+              The flagship
+            </p>
+            <h2
+              className={`${archivo.className} text-4xl font-900 tracking-tight text-white sm:text-6xl`}
+              style={{ fontWeight: 900 }}
+            >
+              Source Library
+            </h2>
+            <p className="mt-6 text-lg leading-relaxed text-stone-200">
+              Wisdom Frontiers conceived and built Source Library — now the
+              world&apos;s largest library of translated primary sources.
+              Thousands of works across more than 100 languages, on medicine,
+              ethics, the mind, and the natural world, many in English for the
+              first time. Digitized, searchable, and structured for both human
+              readers and AI.
+            </p>
+            <a
+              href="https://sourcelibrary.org"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-8 inline-flex items-center gap-2 px-6 py-3 text-sm font-700 uppercase tracking-[0.12em] text-stone-950 transition-transform hover:-translate-y-0.5"
+              style={{ backgroundColor: YELLOW, fontWeight: 700 }}
+            >
+              Enter the library →
+            </a>
+            <div className="mt-8">
+              <Caption>
+                <a
+                  href="https://sourcelibrary.org/book/columba-and-argo-blaeu1602-gallica"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-stone-400 underline decoration-stone-600 underline-offset-2 hover:text-white"
+                >
+                  Argo Navis, the ship among the stars · Blaeu, 1602 · Source
+                  Library ↗
+                </a>
+              </Caption>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Team */}
-      <section id="team" className="py-24 px-6 border-t border-stone-800/60">
-        <div className="max-w-6xl mx-auto">
-          <p className="text-xs font-medium uppercase tracking-[0.3em] text-stone-600 mb-4">
-            Board of Directors
-          </p>
-          <p className="font-[family-name:var(--font-garamond)] text-2xl text-stone-300 mb-16 max-w-2xl">
+      {/* ============ THE CIRCLE ============ */}
+      <section id="circle" className="px-8 py-24 sm:px-14 sm:py-32">
+        <div className="mx-auto max-w-6xl">
+          <Caption>The circle</Caption>
+          <h2
+            className={`${archivo.className} mt-6 max-w-3xl text-3xl font-800 leading-tight tracking-tight sm:text-5xl`}
+            style={{ fontWeight: 800 }}
+          >
             Explorers, neuroscientists, physicians, designers, and AI
-            researchers — each building technology that expands what humans
-            can do and be.
-          </p>
+            researchers.
+          </h2>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-14">
+          {/* The circle */}
+          <div className="mt-14 grid gap-x-8 gap-y-14 sm:grid-cols-2 lg:grid-cols-3">
             {team.map((person) => (
               <a
                 key={person.name}
@@ -249,21 +312,29 @@ export default function Home() {
                 rel="noopener noreferrer"
                 className="group block"
               >
-                <div className="relative w-full aspect-[3/4] mb-5 rounded-lg overflow-hidden bg-stone-900">
+                <div className="relative mb-5 aspect-[3/4] w-full overflow-hidden bg-stone-200">
                   <Image
                     src={person.photo}
                     alt={person.name}
                     fill
-                    className="object-cover object-top grayscale group-hover:grayscale-0 transition-all duration-500"
+                    className="object-cover object-top transition-transform duration-500 group-hover:scale-[1.03]"
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-stone-950/80 via-transparent to-transparent" />
+                  <span
+                    className="absolute bottom-0 left-0 h-1 w-12 transition-all duration-300 group-hover:w-full"
+                    style={{ backgroundColor: YELLOW }}
+                  />
                 </div>
-                <h3 className="font-[family-name:var(--font-garamond)] text-xl text-stone-100 group-hover:text-amber-400 transition-colors">
+                <h3
+                  className={`${archivo.className} text-xl font-700 tracking-tight`}
+                  style={{ fontWeight: 700 }}
+                >
                   {person.name}
                 </h3>
-                <p className="text-sm text-amber-600 mt-1">{person.title}</p>
-                <p className="text-sm text-stone-500 mt-3 leading-relaxed">
+                <p className="mt-1 text-xs uppercase tracking-[0.14em] text-stone-500">
+                  {person.title}
+                </p>
+                <p className="mt-3 text-sm leading-relaxed text-stone-600">
                   {person.bio}
                 </p>
               </a>
@@ -272,26 +343,62 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="border-t border-stone-800/60 py-12 px-6">
-        <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
-          <div className="text-sm text-stone-600">
-            <span className="font-[family-name:var(--font-garamond)] text-stone-400">
-              Wisdom Frontiers
-            </span>{" "}
-            &middot; Nonprofit
-          </div>
-          <div className="flex gap-4 text-sm text-stone-600">
+      {/* ============ THE ASK ============ */}
+      <section className="bg-stone-950 px-8 py-24 text-white sm:px-14 sm:py-28">
+        <div className="mx-auto max-w-5xl">
+          <Caption>Join the expedition</Caption>
+          <h2
+            className={`${archivo.className} mt-6 max-w-3xl text-3xl font-800 leading-tight tracking-tight sm:text-5xl`}
+            style={{ fontWeight: 800 }}
+          >
+            Help carry wisdom into the age of intelligence.
+          </h2>
+          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-stone-300">
+            We are a nonprofit. To grow Source Library and the work around it, we
+            are seeking partners, supporters, and collaborators — institutions
+            with collections to open, funders who share the mission, and builders
+            who want to put humanity&apos;s wisdom into the systems shaping our
+            future.
+          </p>
+          <div className="mt-9 flex flex-wrap items-center gap-4">
             <a
               href="https://sourcelibrary.org"
-              className="hover:text-amber-500 transition-colors"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-6 py-3 text-sm font-700 uppercase tracking-[0.12em] text-stone-950 transition-transform hover:-translate-y-0.5"
+              style={{ backgroundColor: YELLOW, fontWeight: 700 }}
             >
-              Source Library
+              Explore the library →
             </a>
             <a
-              href="https://impact-edu.ai"
-              className="hover:text-amber-500 transition-colors"
+              href="mailto:hello@wisdomfrontiers.org"
+              className="px-6 py-3 text-sm font-700 uppercase tracking-[0.12em] text-white ring-1 ring-white/40 transition-colors hover:bg-white/10"
+              style={{ fontWeight: 700 }}
             >
+              Get in touch
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* ============ FOOTER ============ */}
+      <footer className="border-t border-stone-200 px-8 py-12 sm:px-14">
+        <div className="mx-auto flex max-w-6xl flex-col items-start justify-between gap-4 sm:flex-row sm:items-center">
+          <div className="flex items-center gap-3">
+            <Triangle className="h-5 w-5" />
+            <span
+              className={`${archivo.className} text-sm font-800 uppercase tracking-[0.2em]`}
+              style={{ fontWeight: 800 }}
+            >
+              Wisdom Frontiers
+            </span>
+            <span className="text-sm text-stone-400">· Nonprofit</span>
+          </div>
+          <div className="flex gap-6 text-sm text-stone-500">
+            <a href="https://sourcelibrary.org" className="hover:text-stone-900">
+              Source Library
+            </a>
+            <a href="https://impact-edu.ai" className="hover:text-stone-900">
               Impact Edu
             </a>
           </div>
