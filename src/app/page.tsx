@@ -56,9 +56,9 @@ const projects = [
   {
     name: "Source Library",
     url: "https://sourcelibrary.org",
-    tagline: "The knowledge base",
+    tagline: "The flagship",
     description:
-      "Thousands of years of human insight into medicine, ethics, the mind, and the natural world — digitized, searchable, and structured for both human readers and AI systems. The foundation everything else builds on.",
+      "Thousands of primary sources across more than 100 languages — on medicine, ethics, the mind, and the natural world — many translated into English for the first time. Digitized, searchable, and structured for both human readers and AI. The foundation everything else builds on.",
   },
   {
     name: "Impact Edu",
@@ -110,9 +110,9 @@ export default function Home() {
             <span className="text-amber-500">humanistic future.</span>
           </h1>
           <p className="text-lg sm:text-xl leading-relaxed text-stone-400 max-w-2xl">
-            Wisdom Frontiers builds open knowledge infrastructure and AI tools
-            for human development — grounded in the deepest traditions of
-            understanding what it means to flourish.
+            Wisdom Frontiers builds open knowledge and AI tools for human
+            flourishing in the age of artificial intelligence — drawing on the
+            deepest traditions of what it means to live well.
           </p>
         </div>
       </section>
@@ -126,15 +126,15 @@ export default function Home() {
                 Why This Exists
               </p>
               <a
-                href="https://sourcelibrary.org/q/BejYYaJPyv8qBuoAqAs"
+                href="https://sourcelibrary.org/q/BejoAexWSSxTh76zhkm"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block border-l-2 border-amber-600 pl-5 hover:border-amber-400 transition-colors group"
               >
                 <blockquote className="font-[family-name:var(--font-garamond)] text-xl text-stone-300 italic leading-relaxed group-hover:text-stone-200 transition-colors">
-                  &ldquo;O, the highest and most wonderful happiness of man,
-                  to whom it is granted to possess what he chooses and to be
-                  what he wants!&rdquo;
+                  &ldquo;O the highest and wonderful happiness of man! To whom
+                  it is granted to have what he chooses, to be what he
+                  wills.&rdquo;
                 </blockquote>
                 <cite className="block mt-3 text-sm text-stone-600 not-italic group-hover:text-amber-600 transition-colors">
                   Giovanni Pico della Mirandola
@@ -147,25 +147,36 @@ export default function Home() {
             </div>
             <div className="md:col-span-3 space-y-6 text-stone-400 leading-relaxed">
               <p className="text-stone-200 text-lg">
-                Every generation faces the question of how to raise its children,
-                care for its people, and build a good society. Ours faces it at
-                a moment when the tools are changing faster than our understanding
-                of what they should be used for.
+                We are living through the arrival of intelligence as capable as
+                our own. The question is no longer whether these tools will
+                reshape how we learn, heal, govern, and create — but whether the
+                wisdom to use them well arrives with them.
               </p>
               <p>
-                Wisdom Frontiers is a 501(c)(3) nonprofit that supports the
-                people and projects working to ensure technology serves human
-                development. We digitize and structure humanity&apos;s deepest
-                knowledge about flourishing. We build AI tools grounded in
-                learning science. We fund work at the intersection of ancient
-                insight and modern capability.
+                Wisdom Frontiers began as a circle of explorers, scientists,
+                artists, and builders who kept returning to one question: how do
+                we carry humanity&apos;s hardest-won wisdom into the age of
+                artificial intelligence? Our first answer is{" "}
+                <a
+                  href="https://sourcelibrary.org"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-stone-200 underline decoration-amber-700/60 underline-offset-4 hover:text-amber-400 transition-colors"
+                >
+                  Source Library
+                </a>{" "}
+                — a living archive of thousands of years of human insight, made
+                readable and citable for people and legible to machines.
               </p>
               <p>
-                Our conviction is simple: the knowledge already exists. Across
-                thousands of years and every civilization, humans have thought
-                carefully about what it takes to develop well — as individuals,
-                as communities, as a species. That knowledge should be shaping
-                the systems we build today. We make sure it does.
+                What started as a shared conviction is now real, and growing
+                every week. Source Library holds thousands of primary sources
+                across more than a hundred languages — many rendered into English
+                for the first time. It is the foundation we build everything else
+                on: the knowledge already exists, and our work is to bring it
+                forward — so that the intelligent systems now being built help
+                each of us define our own purpose, not someone else&apos;s. We do
+                this for the generation that will inherit it. For the children.
               </p>
             </div>
           </div>
@@ -214,11 +225,37 @@ export default function Home() {
           <p className="text-xs font-medium uppercase tracking-[0.3em] text-stone-600 mb-4">
             Board of Directors
           </p>
-          <p className="font-[family-name:var(--font-garamond)] text-2xl text-stone-300 mb-16 max-w-2xl">
+          <p className="font-[family-name:var(--font-garamond)] text-2xl text-stone-300 mb-12 max-w-2xl">
             Explorers, neuroscientists, physicians, designers, and AI
             researchers — each building technology that expands what humans
             can do and be.
           </p>
+
+          <div className="mb-16 max-w-3xl flex flex-col sm:flex-row gap-6 items-start">
+            <div className="relative w-full sm:w-44 aspect-[4/5] flex-shrink-0 rounded-lg overflow-hidden bg-stone-900">
+              <Image
+                src="/team/jamie-shadowlight.jpg"
+                alt="Jamie Shadowlight"
+                fill
+                className="object-cover object-center"
+                sizes="(max-width: 640px) 100vw, 176px"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-stone-950/60 via-transparent to-transparent" />
+            </div>
+            <div className="border-l-2 border-amber-700/60 pl-5">
+              <p className="text-xs font-medium uppercase tracking-[0.3em] text-stone-600 mb-3">
+                In memory &middot; The Central Axis
+              </p>
+              <h3 className="font-[family-name:var(--font-garamond)] text-2xl text-stone-200">
+                Jamie Shadowlight
+              </h3>
+              <p className="text-sm text-stone-500 mt-3 leading-relaxed">
+                A violinist and cymatics artist who made the invisible visible —
+                moving water with sound. The harmonic center of our circle, and
+                the light by which we navigate.
+              </p>
+            </div>
+          </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-14">
             {team.map((person) => (
@@ -259,7 +296,7 @@ export default function Home() {
             <span className="font-[family-name:var(--font-garamond)] text-stone-400">
               Wisdom Frontiers
             </span>{" "}
-            &middot; 501(c)(3) Nonprofit &middot; San Francisco
+            &middot; Nonprofit
           </div>
           <div className="flex gap-4 text-sm text-stone-600">
             <a
