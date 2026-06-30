@@ -115,12 +115,6 @@ export default function Explorer() {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-stone-950 via-stone-950/40 to-stone-950/30" />
 
-        {/* NatGeo signature frame */}
-        <div
-          className="pointer-events-none absolute inset-4 sm:inset-6 border-2"
-          style={{ borderColor: YELLOW }}
-        />
-
         <div className="relative z-10 flex h-full flex-col justify-between px-8 py-10 sm:px-14 sm:py-14">
           {/* Wordmark */}
           <div className="flex items-center gap-3">
@@ -176,9 +170,14 @@ export default function Explorer() {
 
           <div className="hidden sm:block">
             <Caption>
-              <span className="text-stone-400">
-                Ottoman celestial map, 1583 · from Source Library
-              </span>
+              <a
+                href="https://sourcelibrary.org/book/art-ottoman-celestial-map"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-stone-400 underline decoration-stone-600 underline-offset-2 hover:text-white"
+              >
+                Ottoman celestial map, 1583 · Source Library ↗
+              </a>
             </Caption>
           </div>
         </div>
@@ -213,8 +212,10 @@ export default function Explorer() {
                 >
                   Source Library
                 </a>{" "}
-                — a living archive of thousands of years of human insight, made
-                readable and citable for people and legible to machines.
+                — which we conceived and built into the world&apos;s largest
+                library of translated primary sources: thousands of years of
+                human insight, made readable and citable for people and legible
+                to machines.
               </p>
               <p>
                 The knowledge already exists. Across every civilization, humans
@@ -280,11 +281,12 @@ export default function Explorer() {
               Source Library
             </h2>
             <p className="mt-6 text-lg leading-relaxed text-stone-200">
-              Thousands of primary sources across more than 100 languages — on
-              medicine, ethics, the mind, and the natural world — many
-              translated into English for the first time. Digitized, searchable,
-              and structured for both human readers and AI. The foundation
-              everything else is built on.
+              Wisdom Frontiers conceived and built Source Library — now the
+              world&apos;s largest library of translated primary sources.
+              Thousands of works across more than 100 languages, on medicine,
+              ethics, the mind, and the natural world, many in English for the
+              first time. Digitized, searchable, and structured for both human
+              readers and AI.
             </p>
             <a
               href="https://sourcelibrary.org"
@@ -297,9 +299,15 @@ export default function Explorer() {
             </a>
             <div className="mt-8">
               <Caption>
-                <span className="text-stone-400">
-                  Argo Navis, the ship among the stars · Blaeu, 1602
-                </span>
+                <a
+                  href="https://sourcelibrary.org/book/columba-and-argo-blaeu1602-gallica"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-stone-400 underline decoration-stone-600 underline-offset-2 hover:text-white"
+                >
+                  Argo Navis, the ship among the stars · Blaeu, 1602 · Source
+                  Library ↗
+                </a>
               </Caption>
             </div>
           </div>
@@ -355,6 +363,44 @@ export default function Explorer() {
                 </p>
               </a>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ============ THE ASK ============ */}
+      <section className="bg-stone-950 px-8 py-24 text-white sm:px-14 sm:py-28">
+        <div className="mx-auto max-w-5xl">
+          <Caption>Join the expedition</Caption>
+          <h2
+            className={`${archivo.className} mt-6 max-w-3xl text-3xl font-800 leading-tight tracking-tight sm:text-5xl`}
+            style={{ fontWeight: 800 }}
+          >
+            Help carry wisdom into the age of intelligence.
+          </h2>
+          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-stone-300">
+            We are a nonprofit. To grow Source Library and the work around it, we
+            are seeking partners, supporters, and collaborators — institutions
+            with collections to open, funders who share the mission, and builders
+            who want to put humanity&apos;s wisdom into the systems shaping our
+            future.
+          </p>
+          <div className="mt-9 flex flex-wrap items-center gap-4">
+            <a
+              href="https://sourcelibrary.org"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-6 py-3 text-sm font-700 uppercase tracking-[0.12em] text-stone-950 transition-transform hover:-translate-y-0.5"
+              style={{ backgroundColor: YELLOW, fontWeight: 700 }}
+            >
+              Explore the library →
+            </a>
+            <a
+              href="mailto:hello@wisdomfrontiers.org"
+              className="px-6 py-3 text-sm font-700 uppercase tracking-[0.12em] text-white ring-1 ring-white/40 transition-colors hover:bg-white/10"
+              style={{ fontWeight: 700 }}
+            >
+              Get in touch
+            </a>
           </div>
         </div>
       </section>

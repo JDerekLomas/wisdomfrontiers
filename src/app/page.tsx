@@ -176,10 +176,12 @@ export default function Home() {
                 readable and citable for people and legible to machines.
               </p>
               <p>
-                What started as a shared conviction is now real, and growing
-                every week. Source Library holds thousands of primary sources
-                across more than a hundred languages — many rendered into English
-                for the first time. It is the foundation we build everything else
+                What started as a shared conviction is now real. We conceived
+                and built Source Library into the world&apos;s largest library of
+                translated primary sources — thousands of works across more than
+                a hundred languages, many rendered into English for the first
+                time, and growing every week. It is the foundation we build
+                everything else
                 on: the knowledge already exists, and our work is to bring it
                 forward — so that the intelligent systems now being built help
                 each of us define our own purpose, not someone else&apos;s. We do
