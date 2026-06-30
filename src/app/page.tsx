@@ -394,14 +394,6 @@ export default function Home() {
             </span>
             <span className="text-sm text-stone-400">· Nonprofit</span>
           </div>
-          <div className="flex gap-6 text-sm text-stone-500">
-            <a href="https://sourcelibrary.org" className="hover:text-stone-900">
-              Source Library
-            </a>
-            <a href="https://impact-edu.ai" className="hover:text-stone-900">
-              Impact Edu
-            </a>
-          </div>
         </div>
       </footer>
     </div>

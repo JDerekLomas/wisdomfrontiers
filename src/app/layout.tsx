@@ -15,14 +15,23 @@ const garamond = EB_Garamond({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://wisdomfrontiers.vercel.app"),
   title: "Wisdom Frontiers",
   description:
-    "Ensuring that ancient knowledge not only survives, but actively shapes the design of future technologies, environments, and human connection.",
+    "Real wisdom for artificial intelligence. A nonprofit society of explorers, scientists, and artists — and the creators of Source Library, the world's largest library of translated primary sources.",
   openGraph: {
-    title: "Wisdom Frontiers",
+    title: "Wisdom Frontiers — Real wisdom for artificial intelligence",
     description:
-      "Ensuring that ancient knowledge not only survives, but actively shapes the design of future technologies, environments, and human connection.",
+      "A society of explorers, scientists, and artists building Source Library, the world's largest library of translated primary sources.",
+    url: "https://wisdomfrontiers.vercel.app",
+    siteName: "Wisdom Frontiers",
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Wisdom Frontiers — Real wisdom for artificial intelligence",
+    description:
+      "A society of explorers building Source Library, the world's largest library of translated primary sources.",
   },
 };
 
