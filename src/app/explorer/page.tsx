@@ -63,6 +63,14 @@ const team = [
   },
 ];
 
+function Triangle({ className = "" }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 100 100" className={className} aria-hidden style={{ display: "block" }}>
+      <polygon points="50,6 95,94 5,94" fill={YELLOW} />
+    </svg>
+  );
+}
+
 function Caption({ children }: { children: React.ReactNode }) {
   return (
     <p className="flex items-center gap-2 text-[11px] uppercase tracking-[0.22em] text-stone-500">
@@ -109,11 +117,7 @@ export default function Explorer() {
         <div className="relative z-10 flex h-full flex-col justify-between px-8 py-10 sm:px-14 sm:py-14">
           {/* Wordmark */}
           <div className="flex items-center gap-3">
-            <span
-              className="h-6 w-6"
-              style={{ backgroundColor: YELLOW }}
-              aria-hidden
-            />
+            <Triangle className="h-6 w-6" />
             <span
               className={`${archivo.className} text-sm font-800 uppercase tracking-[0.28em] text-white`}
               style={{ fontWeight: 800 }}
@@ -141,8 +145,9 @@ export default function Explorer() {
               <span style={{ color: YELLOW }}>intelligence.</span>
             </h1>
             <p className="mt-7 max-w-xl text-base leading-relaxed text-stone-200 sm:text-lg">
-              Explorers, scientists, and artists asking how intelligence — human
-              and artificial — can serve the flourishing of all life.
+              Explorers, scientists, and artists asking how wisdom can guide
+              intelligence — human and artificial — toward the flourishing of
+              all life.
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-4">
               <a
@@ -377,7 +382,7 @@ export default function Explorer() {
       <footer className="border-t border-stone-200 px-8 py-12 sm:px-14">
         <div className="mx-auto flex max-w-6xl flex-col items-start justify-between gap-4 sm:flex-row sm:items-center">
           <div className="flex items-center gap-3">
-            <span className="h-5 w-5" style={{ backgroundColor: YELLOW }} aria-hidden />
+            <Triangle className="h-5 w-5" />
             <span
               className={`${archivo.className} text-sm font-800 uppercase tracking-[0.2em]`}
               style={{ fontWeight: 800 }}
