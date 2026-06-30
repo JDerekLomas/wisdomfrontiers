@@ -2,6 +2,13 @@ import Image from "next/image";
 
 const team = [
   {
+    name: "Jamie Shadowlight",
+    photo: "/team/jamie-shadowlight.jpg",
+    title: "In memory · Violinist & Cymatics Artist",
+    bio: "A pioneering electric violinist who made the invisible visible — moving water with sound through her live cymatics performances. The harmonic center of our circle, and the light by which we navigate.",
+    url: "https://jamieshadowlight.org",
+  },
+  {
     name: "Albert Lin",
     photo: "/team/albert-lin.jpg",
     title: "National Geographic Explorer",
@@ -225,37 +232,11 @@ export default function Home() {
           <p className="text-xs font-medium uppercase tracking-[0.3em] text-stone-600 mb-4">
             Board of Directors
           </p>
-          <p className="font-[family-name:var(--font-garamond)] text-2xl text-stone-300 mb-12 max-w-2xl">
+          <p className="font-[family-name:var(--font-garamond)] text-2xl text-stone-300 mb-16 max-w-2xl">
             Explorers, neuroscientists, physicians, designers, and AI
             researchers — each building technology that expands what humans
             can do and be.
           </p>
-
-          <div className="mb-16 max-w-3xl flex flex-col sm:flex-row gap-6 items-start">
-            <div className="relative w-full sm:w-44 aspect-[4/5] flex-shrink-0 rounded-lg overflow-hidden bg-stone-900">
-              <Image
-                src="/team/jamie-shadowlight.jpg"
-                alt="Jamie Shadowlight"
-                fill
-                className="object-cover object-center"
-                sizes="(max-width: 640px) 100vw, 176px"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-stone-950/60 via-transparent to-transparent" />
-            </div>
-            <div className="border-l-2 border-amber-700/60 pl-5">
-              <p className="text-xs font-medium uppercase tracking-[0.3em] text-stone-600 mb-3">
-                In memory &middot; The Central Axis
-              </p>
-              <h3 className="font-[family-name:var(--font-garamond)] text-2xl text-stone-200">
-                Jamie Shadowlight
-              </h3>
-              <p className="text-sm text-stone-500 mt-3 leading-relaxed">
-                A violinist and cymatics artist who made the invisible visible —
-                moving water with sound. The harmonic center of our circle, and
-                the light by which we navigate.
-              </p>
-            </div>
-          </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-14">
             {team.map((person) => (

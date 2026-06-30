@@ -13,6 +13,13 @@ const YELLOW = "#FFCB05"; // National Geographic-style signal yellow
 
 const team = [
   {
+    name: "Jamie Shadowlight",
+    photo: "/team/jamie-shadowlight.jpg",
+    title: "In memory · Violinist & Cymatics Artist",
+    bio: "A pioneering electric violinist who made the invisible visible — moving water with sound through her live cymatics performances. The harmonic center of our circle, and the light by which we navigate.",
+    url: "https://jamieshadowlight.org",
+  },
+  {
     name: "Albert Lin",
     photo: "/team/albert-lin.jpg",
     title: "National Geographic Explorer",
@@ -311,34 +318,8 @@ export default function Explorer() {
             researchers.
           </h2>
 
-          {/* Jamie memorial */}
-          <div className="mt-14 flex flex-col gap-6 border-t border-stone-200 pt-10 sm:flex-row sm:items-start">
-            <div className="relative aspect-[4/5] w-full flex-shrink-0 overflow-hidden bg-stone-200 sm:w-48">
-              <Image
-                src="/team/jamie-shadowlight.jpg"
-                alt="Jamie Shadowlight"
-                fill
-                className="object-cover object-center"
-              />
-            </div>
-            <div className="pl-1 sm:border-l-[3px] sm:pl-6" style={{ borderColor: YELLOW }}>
-              <Caption>In memory · the central axis</Caption>
-              <h3
-                className={`${archivo.className} mt-3 text-2xl font-800 tracking-tight`}
-                style={{ fontWeight: 800 }}
-              >
-                Jamie Shadowlight
-              </h3>
-              <p className="mt-3 max-w-xl leading-relaxed text-stone-600">
-                A violinist and cymatics artist who made the invisible visible —
-                moving water with sound. The harmonic center of our circle, and
-                the light by which we navigate.
-              </p>
-            </div>
-          </div>
-
-          {/* Founders grid */}
-          <div className="mt-16 grid gap-x-8 gap-y-14 sm:grid-cols-2 lg:grid-cols-3">
+          {/* The circle */}
+          <div className="mt-14 grid gap-x-8 gap-y-14 sm:grid-cols-2 lg:grid-cols-3">
             {team.map((person) => (
               <a
                 key={person.name}
