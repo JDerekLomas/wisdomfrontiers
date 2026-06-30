@@ -139,11 +139,11 @@ export default function Explorer() {
               className={`${archivo.className} text-5xl font-900 leading-[0.95] tracking-tight text-white sm:text-7xl lg:text-8xl`}
               style={{ fontWeight: 900 }}
             >
-              The frontier where
+              Real <span style={{ color: YELLOW }}>wisdom</span>
               <br />
-              wisdom meets
+              for artificial
               <br />
-              <span style={{ color: YELLOW }}>intelligence.</span>
+              intelligence.
             </h1>
             <p className="mt-7 max-w-xl text-base leading-relaxed text-stone-200 sm:text-lg">
               Explorers, scientists, and artists asking how wisdom can guide
