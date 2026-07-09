@@ -16,7 +16,7 @@ const garamond = EB_Garamond({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://wisdomfrontiers.vercel.app"),
+  metadataBase: new URL("https://wisdom-frontiers.com"),
   title: "Wisdom Frontiers",
   description:
     "Real wisdom for artificial intelligence. A nonprofit society of explorers, scientists, and artists — and the creators of Source Library, the world's largest library of translated primary sources.",
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     title: "Wisdom Frontiers — Real wisdom for artificial intelligence",
     description:
       "A society of explorers, scientists, and artists building Source Library, the world's largest library of translated primary sources.",
-    url: "https://wisdomfrontiers.vercel.app",
+    url: "https://wisdom-frontiers.com",
     siteName: "Wisdom Frontiers",
     type: "website",
   },
