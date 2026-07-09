@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist } from "next/font/google";
 import { EB_Garamond } from "next/font/google";
 import "./globals.css";
+import EditMode from "./EditMode";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -46,6 +47,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${garamond.variable} antialiased`}
       >
         {children}
+        <EditMode />
       </body>
     </html>
   );
