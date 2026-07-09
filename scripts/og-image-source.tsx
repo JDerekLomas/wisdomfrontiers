@@ -1,3 +1,10 @@
+// Source for src/app/opengraph-image.jpg. The live OG image is a static JPEG
+// because WhatsApp rejects preview images over ~600KB and this route's PNG
+// output is ~1.3MB. To regenerate: move this file to src/app/opengraph-image.tsx,
+// deploy (or `next build`), fetch /opengraph-image, convert to JPEG
+// (`sips -s format jpeg -s formatOptions 82`), save as src/app/opengraph-image.jpg,
+// and move this file back.
+
 import { ImageResponse } from "next/og";
 import { readFile } from "node:fs/promises";
 import { join } from "node:path";
