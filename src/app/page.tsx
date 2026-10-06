@@ -70,49 +70,36 @@ const team = [
   },
 ];
 
-const projects = [
+// The three projects shown as full-width bands. Each is the circle's work;
+// `who` names the member it most reflects.
+const features = [
   {
     title: "Source Library",
-    body: "The world's largest library of translated primary sources: more than 50,000 works in over 100 languages, readable by people and AI.",
+    line: "The world's largest library of translated primary sources. More than 50,000 works in over 100 languages, readable by people and AI.",
     url: "https://sourcelibrary.org",
-    live: true,
-  },
-  {
-    title: "Earthlove",
-    body: "Live satellite imagery of the whole Earth, every ten minutes: a way to watch the planet breathe.",
-    url: "https://earthlove.live",
-    who: "Luke Barrington",
-    live: true,
-  },
-  {
-    title: "Lost Cities",
-    body: "Lidar, satellites, and AI to find what history lost, and expeditions to scan manuscripts no one has read.",
-    who: "Albert Lin",
-  },
-  {
-    title: "Talking to animals",
-    body: "The largest study of augmented animal communication: learning what other minds have to say.",
-    who: "Leo Trottier",
-  },
-  {
-    title: "Ecoscanning coral reefs",
-    body: "Measuring the wellbeing of living ecosystems, starting with the reefs.",
-    who: "Eli Spencer",
-  },
-  {
-    title: "The inner frontier",
-    body: "Brain-computer interfaces and focused ultrasound: technology that works with the mind rather than on it.",
-    who: "Tim Mullen",
-  },
-  {
-    title: "Fashion archaeology",
-    body: "Recovering lost craft traditions and the knowledge carried in them.",
-    who: "Qasim Anwar",
-  },
-  {
-    title: "Positive AI",
-    body: "Designing AI systems that measure and support human wellbeing.",
+    cta: "Enter the library",
+    image: "/work/source-library.jpg",
+    alt: "A manuscript page in Arabic script, lit by candlelight",
     who: "Derek Lomas",
+  },
+  {
+    title: "Earth Love",
+    line: "Every cloud on Earth, as five weather satellites see it, ten minutes at a time, on a globe you can turn and play back.",
+    url: "https://earthlove.live/globe/",
+    cta: "Turn the globe",
+    video: "/work/earthlove-globe.mp4",
+    image: "/work/earthlove-globe.jpg",
+    alt: "The Earth from space with live cloud cover",
+    who: "Luke Barrington",
+  },
+  {
+    title: "TEBO 1",
+    line: "The genesis of compassion. Thirty-one thousand years ago, in a cave in Borneo, a community performed the oldest known successful major operation and cared a child back to life.",
+    url: "https://tebo1.com",
+    cta: "Visit TEBO 1",
+    image: "/work/tebo1.jpg",
+    alt: "People in a painted cave tending an injured child by firelight",
+    who: "Albert Lin",
   },
 ];
 
@@ -192,50 +179,20 @@ export default function Home() {
       </section>
 
       {/* ============ THESIS ============ */}
-      <section className="px-8 pt-24 sm:px-14 sm:pt-32">
+      <section className="px-8 py-24 sm:px-14 sm:py-32">
         <div className="mx-auto max-w-4xl">
           <h2 className={h2} style={{ fontWeight: 800 }}>
             We are living through the arrival of superintelligence. We need
             wisdom.
           </h2>
           <p className="mt-10 max-w-2xl text-lg leading-relaxed text-stone-700">
-            Within our lifetimes, machines may exceed us at everything we know
-            how to measure. Whether that becomes an apocalypse or a renaissance
-            depends less on how capable they are than on what they understand
-            about living well.
-          </p>
-        </div>
-      </section>
-
-      {/* ============ ALIGNMENT ============ */}
-      <section className="px-8 pt-24 sm:px-14 sm:pt-32">
-        <div className="mx-auto max-w-4xl">
-          <Caption>Alignment has three parties</Caption>
-          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-stone-700">
-            AI alignment is usually framed as a problem between machines and the
-            people who build them. We think there are three parties: artificial
-            systems, human beings, and the natural world. Each is a form of
-            intelligence, and AI is fast becoming part of our nature. The work
-            is to bring all three into alignment, so that AI serves human
-            flourishing and both serve the living world that made them.
-          </p>
-        </div>
-      </section>
-
-      {/* ============ INHERITANCE ============ */}
-      <section className="px-8 py-24 sm:px-14 sm:py-32">
-        <div className="mx-auto max-w-4xl">
-          <Caption>What AI doesn&apos;t know yet</Caption>
-          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-stone-700">
-            Every civilization has asked what it takes to live well. Most of
-            their answers were never translated, so a machine trained on the
-            modern internet inherits a thin slice of human thought. We want the
-            intelligences now being built to know the whole inheritance. We
-            also want people to grow wiser, not just more capable, as those
-            intelligences grow.
+            Alignment has three parties: artificial intelligence, human beings,
+            and the living world. We build things that help them understand
+            each other, starting with what people have learned, over thousands
+            of years, about living well.
           </p>
           <p
-            className={`${archivo.className} mt-10 text-2xl tracking-tight`}
+            className={`${archivo.className} mt-8 text-2xl tracking-tight`}
             style={{ fontWeight: 800 }}
           >
             For the children.
@@ -243,86 +200,63 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ============ SOURCE LIBRARY BAND ============ */}
-      <section className="relative h-[60vh] min-h-[420px] w-full overflow-hidden bg-stone-900">
-        <Image
-          src="/explorer/argo-navis.jpg"
-          alt="Celestial chart of Argo Navis, the ship among the stars, 1602"
-          fill
-          className="object-cover object-center"
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-stone-950/85 via-stone-950/40 to-transparent" />
-        <div className="relative z-10 flex h-full flex-col justify-between px-8 py-10 sm:px-14 sm:py-14">
-          <div />
+      {/* ============ WORK ============ */}
+      <section id="work">
+        {features.map((f) => (
           <a
-            href="https://sourcelibrary.org"
+            key={f.title}
+            href={f.url}
             target="_blank"
             rel="noopener noreferrer"
-            className={`${archivo.className} max-w-xl text-4xl tracking-tight text-white hover:underline sm:text-6xl`}
-            style={{ fontWeight: 900, textDecorationColor: YELLOW }}
+            className="group relative flex h-[78vh] min-h-[520px] w-full items-end overflow-hidden bg-black"
           >
-            Source Library ↗
-          </a>
-          <div className="hidden sm:block">
-            <Caption>
-              <a
-                href="https://sourcelibrary.org/book/columba-and-argo-blaeu1602-gallica"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-stone-400 underline decoration-stone-600 underline-offset-2 hover:text-white"
-              >
-                Argo Navis, the ship among the stars · Blaeu, 1602 · Source
-                Library ↗
-              </a>
-            </Caption>
-          </div>
-        </div>
-      </section>
-
-      {/* ============ WHAT WE'RE DOING ============ */}
-      <section id="work" className="px-8 py-24 sm:px-14 sm:py-32">
-        <div className="mx-auto max-w-6xl">
-          <Caption>What we&apos;re doing</Caption>
-          <div className="mt-12 grid gap-x-10 gap-y-12 sm:grid-cols-2 lg:grid-cols-4">
-            {projects.map((p) => {
-              const title = (
-                <h3
-                  className={`${archivo.className} flex items-center gap-3 text-xl tracking-tight`}
-                  style={{ fontWeight: 700 }}
+            {f.video ? (
+              <video
+                className="absolute inset-0 h-full w-full object-cover"
+                src={f.video}
+                poster={f.image}
+                autoPlay
+                muted
+                loop
+                playsInline
+                aria-label={f.alt}
+              />
+            ) : (
+              <Image
+                src={f.image}
+                alt={f.alt}
+                fill
+                sizes="100vw"
+                className="object-cover transition-transform duration-[1500ms] group-hover:scale-[1.03]"
+              />
+            )}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent" />
+            <div className="relative z-10 w-full px-8 pb-12 sm:px-14 sm:pb-16">
+              <div className="max-w-2xl">
+                <h2
+                  className={`${archivo.className} text-5xl tracking-tight text-white sm:text-7xl`}
+                  style={{ fontWeight: 900 }}
                 >
-                  {p.title}
-                  {p.live && (
-                    <span
-                      className="px-2 py-0.5 text-[10px] uppercase tracking-[0.16em] text-stone-950"
-                      style={{ backgroundColor: YELLOW }}
-                    >
-                      Live
-                    </span>
-                  )}
-                </h3>
-              );
-              return (
-                <div key={p.title} className="pt-5" style={{ borderTop: `3px solid ${YELLOW}` }}>
-                  {p.url ? (
-                    <a href={p.url} target="_blank" rel="noopener noreferrer" className="hover:underline">
-                      {title}
-                    </a>
-                  ) : (
-                    title
-                  )}
-                  <p className="mt-3 text-base leading-relaxed text-stone-600">{p.body}</p>
-                  {p.who && (
-                    <p className="mt-3 text-xs uppercase tracking-[0.14em] text-stone-400">{p.who}</p>
-                  )}
+                  {f.title}
+                </h2>
+                <p className="mt-5 text-lg leading-relaxed text-stone-200">{f.line}</p>
+                <div className="mt-7 flex flex-wrap items-center gap-x-6 gap-y-3">
+                  <span
+                    className="px-5 py-2.5 text-sm uppercase tracking-[0.12em] text-stone-950 transition-transform group-hover:-translate-y-0.5"
+                    style={{ backgroundColor: YELLOW, fontWeight: 700 }}
+                  >
+                    {f.cta} →
+                  </span>
+                  <span className="text-xs uppercase tracking-[0.18em] text-stone-400">{f.who}</span>
                 </div>
-              );
-            })}
-          </div>
-        </div>
+              </div>
+            </div>
+          </a>
+        ))}
       </section>
 
       {/* ============ THE CIRCLE ============ */}
-      <section id="circle" className="px-8 pb-24 sm:px-14 sm:pb-32">
+      <section id="circle" className="px-8 py-24 sm:px-14 sm:py-32">
         <div className="mx-auto max-w-6xl">
           <Caption>The circle</Caption>
           <div className="mt-12 grid grid-cols-2 gap-x-6 gap-y-10 sm:grid-cols-4">
