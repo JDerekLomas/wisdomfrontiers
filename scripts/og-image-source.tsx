@@ -9,7 +9,7 @@ import { ImageResponse } from "next/og";
 import { readFile } from "node:fs/promises";
 import { join } from "node:path";
 
-export const alt = "Wisdom Frontiers — Real wisdom for artificial intelligence";
+export const alt = "Wisdom Frontiers — What is wisdom for artificial intelligence?";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -134,11 +134,11 @@ export default async function OpengraphImage() {
               }}
             >
               <div style={{ display: "flex" }}>
-                <span>Real&nbsp;</span>
+                <span>What is&nbsp;</span>
                 <span style={{ color: YELLOW }}>wisdom</span>
               </div>
               <div style={{ display: "flex" }}>for artificial</div>
-              <div style={{ display: "flex" }}>intelligence.</div>
+              <div style={{ display: "flex" }}>intelligence?</div>
             </div>
           </div>
 
