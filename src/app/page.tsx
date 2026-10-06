@@ -70,10 +70,39 @@ const team = [
   },
 ];
 
+const frontiers = [
+  {
+    title: "Ancient wisdom",
+    body: "Digitizing and translating the world's primary sources so people and AI can read them. Live as Source Library.",
+    live: true,
+  },
+  {
+    title: "Interfaces to animals & ecosystems",
+    body: "Technology that lets us listen to, and talk with, the rest of the living world.",
+  },
+  {
+    title: "Living memory",
+    body: "The Hundred Hours Project: recording the memories of human lives in depth, before they are lost.",
+  },
+  {
+    title: "Ecoscanning",
+    body: "Sensing and mapping ecological wellbeing from the ground to orbit.",
+  },
+  {
+    title: "New mythologies",
+    body: "Films, art, and stories that give the age of AI meaning worth living into.",
+  },
+  {
+    title: "Human potential neurotech",
+    body: "Tools for the inner frontier: attention, insight, and contact with nature.",
+  },
+];
+
 const pillars = [
   {
     title: "Gather",
     body: "We bring explorers, scientists, artists, and builders together in person — small rooms, real conversations, a shared question. The best projects start at a table, not on a call.",
+    gatherings: ["Joshua Tree, 2022", "Black Rock Desert, 2023", "Roatán, Honduras, 2025"],
   },
   {
     title: "Build",
@@ -313,6 +342,48 @@ export default function Home() {
                   {p.title}
                 </h3>
                 <p className="mt-4 text-base leading-relaxed text-stone-700">{p.body}</p>
+                {p.gatherings && (
+                  <ul className="mt-5 space-y-1 text-xs uppercase tracking-[0.14em] text-stone-500">
+                    {p.gatherings.map((g) => (
+                      <li key={g}>{g}</li>
+                    ))}
+                  </ul>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ============ FRONTIERS ============ */}
+      <section id="frontiers" className="px-8 pt-24 sm:px-14 sm:pt-32">
+        <div className="mx-auto max-w-6xl">
+          <Caption>The frontiers</Caption>
+          <h2
+            className={`${archivo.className} mt-6 max-w-3xl text-3xl font-800 leading-tight tracking-tight sm:text-5xl`}
+            style={{ fontWeight: 800 }}
+          >
+            At the dawn of AGI, what does AI need to learn that isn&apos;t in its
+            training data?
+          </h2>
+          <div className="mt-14 grid gap-x-10 gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
+            {frontiers.map((f) => (
+              <div key={f.title}>
+                <h3
+                  className={`${archivo.className} flex items-center gap-3 text-lg font-700 tracking-tight`}
+                  style={{ fontWeight: 700 }}
+                >
+                  {f.title}
+                  {f.live && (
+                    <span
+                      className="px-2 py-0.5 text-[10px] uppercase tracking-[0.16em] text-stone-950"
+                      style={{ backgroundColor: YELLOW }}
+                    >
+                      Live
+                    </span>
+                  )}
+                </h3>
+                <p className="mt-2 text-base leading-relaxed text-stone-600">{f.body}</p>
               </div>
             ))}
           </div>
