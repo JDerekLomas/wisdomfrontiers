@@ -73,45 +73,45 @@ const team = [
 const frontiers = [
   {
     title: "Ancient wisdom",
-    body: "Digitizing and translating the world's primary sources so people and AI can read them. Live as Source Library.",
+    body: "Digitizing and translating the world's primary sources so people and AI can read them.",
+    who: "Live as Source Library",
     live: true,
+  },
+  {
+    title: "Expeditions",
+    body: "Finding the sources no one has read yet, from cave art in Borneo to manuscript libraries in Rajasthan.",
+    who: "Albert Lin",
   },
   {
     title: "Interfaces to animals & ecosystems",
     body: "Technology that lets us listen to, and talk with, the rest of the living world.",
+    who: "Leo Trottier",
+  },
+  {
+    title: "Ecoscanning",
+    body: "Sensing and mapping ecological wellbeing from the ground to orbit.",
+    who: "Luke Barrington",
+  },
+  {
+    title: "Human potential neurotech",
+    body: "Tools for the inner frontier: attention, insight, and contact with nature.",
+    who: "Tim Mullen",
+  },
+  {
+    title: "New mythologies",
+    body: "Films, art, and stories that give the age of AI a meaning worth living into.",
+    who: "Albert Lin & Qasim Anwar",
   },
   {
     title: "Living memory",
     body: "The Hundred Hours Project: recording the memories of human lives in depth, before they are lost.",
   },
-  {
-    title: "Ecoscanning",
-    body: "Sensing and mapping ecological wellbeing from the ground to orbit.",
-  },
-  {
-    title: "New mythologies",
-    body: "Films, art, and stories that give the age of AI meaning worth living into.",
-  },
-  {
-    title: "Human potential neurotech",
-    body: "Tools for the inner frontier: attention, insight, and contact with nature.",
-  },
 ];
 
-const pillars = [
-  {
-    title: "Gather",
-    body: "We bring explorers, scientists, artists, and builders together in person — small rooms, real conversations, a shared question. The best projects start at a table, not on a call.",
-    gatherings: ["Joshua Tree, 2022", "Black Rock Desert, 2023", "Roatán, Honduras, 2025"],
-  },
-  {
-    title: "Build",
-    body: "We turn those conversations into working things. Source Library went from an idea to the world's largest library of translated primary sources. The next projects come out of the same circle.",
-  },
-  {
-    title: "Fund",
-    body: "AI is creating extraordinary wealth. We raise philanthropic capital from the people and companies building it, and put it into ambitious projects that make intelligence — human and artificial — wiser.",
-  },
+const gatherings = [
+  "Joshua Tree, California · 2022",
+  "Black Rock Desert, Nevada · 2023",
+  "Roatán, Honduras · 2025",
 ];
 
 function Triangle({ className = "" }: { className?: string }) {
@@ -273,6 +273,70 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ============ HARMONY ============ */}
+      <section id="harmony" className="px-8 pb-24 sm:px-14 sm:pb-32">
+        <div className="mx-auto max-w-5xl">
+          <Caption>The idea</Caption>
+          <h2
+            className={`${archivo.className} mt-6 max-w-4xl text-3xl font-800 leading-[1.08] tracking-tight sm:text-5xl`}
+            style={{ fontWeight: 800 }}
+          >
+            Harmony is not sameness.
+          </h2>
+          <div className="mt-14 grid gap-12 md:grid-cols-5">
+            <div className="md:col-span-3 space-y-6 text-lg leading-relaxed text-stone-700">
+              <p>
+                The idea is very old. Pythagoras found it in the ratios of
+                music, Confucius in a well-governed state, Plato in the health
+                of the soul: different parts, held together, become something
+                none of them could be alone.
+              </p>
+              <p>
+                It runs through our research on harmony in design, on resonance
+                between minds, and on the rituals every culture invented to
+                bring people into tune with each other. It also describes the
+                circle: an explorer, a neuroscientist, a physician, an
+                animal-communication researcher, an Earth-AI scientist, an
+                artist, a design professor, and a violinist who made sound
+                visible.
+              </p>
+              <p>
+                Today&apos;s neural networks still optimize a function first
+                developed to represent &ldquo;harmony.&rdquo; As AI becomes the
+                most powerful technology of mind we have built, we want it to
+                learn what that word has always meant: that our differences can
+                be our strengths.
+              </p>
+            </div>
+            <div className="md:col-span-2">
+              <a
+                href="https://dereklomas.me/papers/enigma-of-mind.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block pl-6"
+                style={{ borderLeft: `3px solid ${YELLOW}` }}
+              >
+                <blockquote
+                  className={`${archivo.className} text-xl font-600 leading-snug text-stone-900`}
+                  style={{ fontWeight: 600 }}
+                >
+                  &ldquo;Do we also have the responsibility to imagine new
+                  ceremonies, rituals, or technologies that could help bind
+                  together our future societies?&rdquo;
+                </blockquote>
+                <cite className="mt-4 block text-xs uppercase not-italic tracking-[0.18em] text-stone-500">
+                  Albert Lin &amp; Derek Lomas
+                  <br />
+                  <span className="text-stone-400">
+                    The Enigma of Mind · Cambridge University Press
+                  </span>
+                </cite>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ============ FLAGSHIP: SOURCE LIBRARY ============ */}
       <section id="work" className="relative h-[80vh] min-h-[560px] w-full overflow-hidden bg-stone-900">
         <Image
@@ -291,6 +355,14 @@ export default function Home() {
               Source Library
             </h2>
             <p className="mt-6 text-lg leading-relaxed text-stone-200">
+              In Roatán in 2025 we talked about a future in which all human
+              knowledge had been translated and could be felt around the world.
+              Most of it never has been: about 3% of the Latin Renaissance
+              exists in English, and what isn&apos;t in English isn&apos;t in
+              AI&apos;s training data. So we built it, with the Embassy of the
+              Free Mind in Amsterdam.
+            </p>
+            <p className="mt-4 text-lg leading-relaxed text-stone-200">
               The corpus: more than 50,000 works across more than 100
               languages — medicine, ethics, the mind, the natural world — many
               in English for the first time. Searchable, citable, and open to
@@ -318,39 +390,6 @@ export default function Home() {
                 </a>
               </Caption>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ============ HOW WE WORK ============ */}
-      <section id="how" className="px-8 pt-24 sm:px-14 sm:pt-32">
-        <div className="mx-auto max-w-6xl">
-          <Caption>How we work</Caption>
-          <h2
-            className={`${archivo.className} mt-6 max-w-3xl text-3xl font-800 leading-tight tracking-tight sm:text-5xl`}
-            style={{ fontWeight: 800 }}
-          >
-            We gather, we build, and we fund.
-          </h2>
-          <div className="mt-14 grid gap-12 md:grid-cols-3">
-            {pillars.map((p) => (
-              <div key={p.title} className="pt-6" style={{ borderTop: `3px solid ${YELLOW}` }}>
-                <h3
-                  className={`${archivo.className} text-2xl font-800 tracking-tight`}
-                  style={{ fontWeight: 800 }}
-                >
-                  {p.title}
-                </h3>
-                <p className="mt-4 text-base leading-relaxed text-stone-700">{p.body}</p>
-                {p.gatherings && (
-                  <ul className="mt-5 space-y-1 text-xs uppercase tracking-[0.14em] text-stone-500">
-                    {p.gatherings.map((g) => (
-                      <li key={g}>{g}</li>
-                    ))}
-                  </ul>
-                )}
-              </div>
-            ))}
           </div>
         </div>
       </section>
@@ -384,9 +423,43 @@ export default function Home() {
                   )}
                 </h3>
                 <p className="mt-2 text-base leading-relaxed text-stone-600">{f.body}</p>
+                {f.who && (
+                  <p className="mt-2 text-xs uppercase tracking-[0.14em] text-stone-400">{f.who}</p>
+                )}
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* ============ GATHERINGS ============ */}
+      <section id="gatherings" className="px-8 pt-24 sm:px-14 sm:pt-32">
+        <div className="mx-auto grid max-w-6xl gap-10 md:grid-cols-5">
+          <div className="md:col-span-3">
+            <Caption>Gatherings</Caption>
+            <h2
+              className={`${archivo.className} mt-6 text-3xl font-800 leading-tight tracking-tight sm:text-5xl`}
+              style={{ fontWeight: 800 }}
+            >
+              The work starts in person.
+            </h2>
+            <p className="mt-6 text-lg leading-relaxed text-stone-700">
+              Since 2022 the circle has met in deserts and on islands to ask
+              what AI, and the generation that inherits it, will need from us.
+              Source Library came out of one of those conversations.
+            </p>
+          </div>
+          <ul className="md:col-span-2 md:pt-16 space-y-3">
+            {gatherings.map((g) => (
+              <li
+                key={g}
+                className={`${archivo.className} pl-4 text-lg font-700 tracking-tight`}
+                style={{ fontWeight: 700, borderLeft: `3px solid ${YELLOW}` }}
+              >
+                {g}
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
 
@@ -446,18 +519,24 @@ export default function Home() {
       {/* ============ THE ASK ============ */}
       <section className="bg-stone-950 px-8 py-24 text-white sm:px-14 sm:py-28">
         <div className="mx-auto max-w-5xl">
-          <Caption>Join the expedition</Caption>
+          <Caption>Patrons</Caption>
           <h2
             className={`${archivo.className} mt-6 max-w-3xl text-3xl font-800 leading-tight tracking-tight sm:text-5xl`}
             style={{ fontWeight: 800 }}
           >
-            Fund the next expedition.
+            Be a patron of the next Renaissance.
           </h2>
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-stone-300">
-            We are a nonprofit. We are looking for people who want their AI
-            philanthropy to build something lasting — funders who share the
-            mission, institutions with collections to open, and builders who
-            want to join us at the table.
+            In fifteenth-century Florence, Cosimo de&apos; Medici paid Marsilio
+            Ficino to translate Plato and the Hermetica, and a Renaissance
+            followed. We are a nonprofit looking for the patrons of the next
+            one: people who want their AI philanthropy to pay for translation,
+            for expeditions that recover lost sources, and for the gatherings
+            where new projects begin.
+          </p>
+          <p className="mt-6 text-sm uppercase tracking-[0.18em] text-stone-500">
+            &ldquo;From existential risk to exponential hope.&rdquo; — Tim
+            Mullen
           </p>
           <div className="mt-9 flex flex-wrap items-center gap-4">
             <a

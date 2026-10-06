@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://wisdom-frontiers.com"),
   title: "Wisdom Frontiers",
   description:
-    "What is wisdom for artificial intelligence? A nonprofit circle of explorers, scientists, and builders who gather, build, and fund — creators of Source Library, the world's largest library of translated primary sources.",
+    "What is wisdom for artificial intelligence? A nonprofit circle of explorers, scientists, and artists working on harmony between human and artificial intelligence — and the creators of Source Library, the world's largest library of translated primary sources.",
   openGraph: {
     title: "Wisdom Frontiers — What is wisdom for artificial intelligence?",
     description:
