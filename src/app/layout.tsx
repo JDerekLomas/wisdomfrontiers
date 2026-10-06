@@ -19,11 +19,11 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://wisdom-frontiers.com"),
   title: "Wisdom Frontiers",
   description:
-    "What is wisdom for artificial intelligence? A nonprofit circle of explorers, scientists, and artists working on harmony between human and artificial intelligence — and the creators of Source Library, the world's largest library of translated primary sources.",
+    "What is wisdom for artificial intelligence? A nonprofit circle of explorers, scientists, and artists working to align AI, humanity, and the natural world. Creators of Source Library.",
   openGraph: {
     title: "Wisdom Frontiers — What is wisdom for artificial intelligence?",
     description:
-      "A society of explorers, scientists, and artists building Source Library, the world's largest library of translated primary sources.",
+      "A circle of explorers, scientists, and artists working to align AI, humanity, and the natural world. Creators of Source Library.",
     url: "https://wisdom-frontiers.com",
     siteName: "Wisdom Frontiers",
     type: "website",
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Wisdom Frontiers — What is wisdom for artificial intelligence?",
     description:
-      "A society of explorers building Source Library, the world's largest library of translated primary sources.",
+      "A circle of explorers, scientists, and artists working to align AI, humanity, and the natural world.",
   },
 };
 
