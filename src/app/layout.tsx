@@ -19,9 +19,9 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://wisdom-frontiers.com"),
   title: "Wisdom Frontiers",
   description:
-    "Real wisdom for artificial intelligence. A nonprofit society of explorers, scientists, and artists — and the creators of Source Library, the world's largest library of translated primary sources.",
+    "What is wisdom for artificial intelligence? A nonprofit circle of explorers, scientists, and builders who gather, build, and fund — creators of Source Library, the world's largest library of translated primary sources.",
   openGraph: {
-    title: "Wisdom Frontiers — Real wisdom for artificial intelligence",
+    title: "Wisdom Frontiers — What is wisdom for artificial intelligence?",
     description:
       "A society of explorers, scientists, and artists building Source Library, the world's largest library of translated primary sources.",
     url: "https://wisdom-frontiers.com",
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Wisdom Frontiers — Real wisdom for artificial intelligence",
+    title: "Wisdom Frontiers — What is wisdom for artificial intelligence?",
     description:
       "A society of explorers building Source Library, the world's largest library of translated primary sources.",
   },

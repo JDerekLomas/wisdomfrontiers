@@ -70,6 +70,21 @@ const team = [
   },
 ];
 
+const pillars = [
+  {
+    title: "Gather",
+    body: "We bring explorers, scientists, artists, and builders together in person — small rooms, real conversations, a shared question. The best projects start at a table, not on a call.",
+  },
+  {
+    title: "Build",
+    body: "We turn those conversations into working things. Source Library went from an idea to the world's largest library of translated primary sources. The next projects come out of the same circle.",
+  },
+  {
+    title: "Fund",
+    body: "AI is creating extraordinary wealth. We raise philanthropic capital from the people and companies building it, and put it into ambitious projects that make intelligence — human and artificial — wiser.",
+  },
+];
+
 function Triangle({ className = "" }: { className?: string }) {
   return (
     <svg viewBox="0 0 100 100" className={className} aria-hidden style={{ display: "block" }}>
@@ -131,11 +146,11 @@ export default function Home() {
               className={`${archivo.className} text-5xl font-900 leading-[0.95] tracking-tight text-white sm:text-7xl lg:text-8xl`}
               style={{ fontWeight: 900 }}
             >
-              Real <span style={{ color: YELLOW }}>wisdom</span>
+              What is <span style={{ color: YELLOW }}>wisdom</span>
               <br />
               for artificial
               <br />
-              intelligence.
+              intelligence?
             </h1>
             <p className="mt-7 max-w-xl text-base leading-relaxed text-stone-200 sm:text-lg">
               Explorers, scientists, and artists asking how wisdom can guide
@@ -167,18 +182,19 @@ export default function Home() {
             className={`${archivo.className} mt-6 max-w-4xl text-3xl font-800 leading-[1.08] tracking-tight sm:text-5xl`}
             style={{ fontWeight: 800 }}
           >
-            We are living through the arrival of intelligence as capable as our
-            own. The question is whether the wisdom to use it well arrives with
-            it.
+            We are living through the arrival of superintelligence. We need
+            wisdom.
           </h2>
 
           <div className="mt-14 grid gap-12 md:grid-cols-5">
             <div className="md:col-span-3 space-y-6 text-lg leading-relaxed text-stone-700">
               <p>
-                Wisdom Frontiers began as a circle of explorers, scientists,
-                artists, and builders who kept returning to one question: how do
-                we carry humanity&apos;s hardest-won wisdom into the age of
-                artificial intelligence? Our first answer is{" "}
+                Wisdom Frontiers is a circle of explorers, scientists, and
+                builders asking the question: how do we carry humanity&apos;s
+                hardest-won wisdom into the next age of our species?
+              </p>
+              <p>
+                We conceived and built{" "}
                 <a
                   href="https://sourcelibrary.org"
                   target="_blank"
@@ -188,20 +204,15 @@ export default function Home() {
                 >
                   Source Library
                 </a>{" "}
-                — which we conceived and built into the world&apos;s largest
-                library of translated primary sources: thousands of years of
-                human insight, made readable and citable for people and legible
-                to machines.
+                into the world&apos;s largest library of translated primary
+                sources: thousands of years of human insight, made readable to
+                people and AI.
               </p>
               <p>
-                The knowledge already exists. Across every civilization, humans
-                have thought carefully about what it takes to live well — to
-                become wiser, freer, and more whole. Our work is to bring it
-                forward, so that the intelligent systems now being built help
-                each of us define our own purpose, not someone else&apos;s. We
-                do this for the generation that will inherit it. For the
-                children.
+                Across every civilization, humans have thought carefully about
+                what it takes to live well.
               </p>
+              <p className="font-medium text-stone-900">For the children.</p>
             </div>
 
             {/* Pull-quote */}
@@ -244,12 +255,6 @@ export default function Home() {
         <div className="absolute inset-0 bg-gradient-to-r from-stone-950/90 via-stone-950/55 to-transparent" />
         <div className="relative z-10 flex h-full items-center px-8 sm:px-14">
           <div className="max-w-xl">
-            <p
-              className="mb-4 text-xs uppercase tracking-[0.3em]"
-              style={{ color: YELLOW }}
-            >
-              The flagship
-            </p>
             <h2
               className={`${archivo.className} text-4xl font-900 tracking-tight text-white sm:text-6xl`}
               style={{ fontWeight: 900 }}
@@ -257,12 +262,10 @@ export default function Home() {
               Source Library
             </h2>
             <p className="mt-6 text-lg leading-relaxed text-stone-200">
-              Wisdom Frontiers conceived and built Source Library — now the
-              world&apos;s largest library of translated primary sources.
-              Thousands of works across more than 100 languages, on medicine,
-              ethics, the mind, and the natural world, many in English for the
-              first time. Digitized, searchable, and structured for both human
-              readers and AI.
+              The corpus: more than 50,000 works across more than 100
+              languages — medicine, ethics, the mind, the natural world — many
+              in English for the first time. Searchable, citable, and open to
+              both human readers and AI.
             </p>
             <a
               href="https://sourcelibrary.org"
@@ -286,6 +289,32 @@ export default function Home() {
                 </a>
               </Caption>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ============ HOW WE WORK ============ */}
+      <section id="how" className="px-8 pt-24 sm:px-14 sm:pt-32">
+        <div className="mx-auto max-w-6xl">
+          <Caption>How we work</Caption>
+          <h2
+            className={`${archivo.className} mt-6 max-w-3xl text-3xl font-800 leading-tight tracking-tight sm:text-5xl`}
+            style={{ fontWeight: 800 }}
+          >
+            We gather, we build, and we fund.
+          </h2>
+          <div className="mt-14 grid gap-12 md:grid-cols-3">
+            {pillars.map((p) => (
+              <div key={p.title} className="pt-6" style={{ borderTop: `3px solid ${YELLOW}` }}>
+                <h3
+                  className={`${archivo.className} text-2xl font-800 tracking-tight`}
+                  style={{ fontWeight: 800 }}
+                >
+                  {p.title}
+                </h3>
+                <p className="mt-4 text-base leading-relaxed text-stone-700">{p.body}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -351,14 +380,13 @@ export default function Home() {
             className={`${archivo.className} mt-6 max-w-3xl text-3xl font-800 leading-tight tracking-tight sm:text-5xl`}
             style={{ fontWeight: 800 }}
           >
-            Help carry wisdom into the age of intelligence.
+            Fund the next expedition.
           </h2>
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-stone-300">
-            We are a nonprofit. To grow Source Library and the work around it, we
-            are seeking partners, supporters, and collaborators — institutions
-            with collections to open, funders who share the mission, and builders
-            who want to put humanity&apos;s wisdom into the systems shaping our
-            future.
+            We are a nonprofit. We are looking for people who want their AI
+            philanthropy to build something lasting — funders who share the
+            mission, institutions with collections to open, and builders who
+            want to join us at the table.
           </p>
           <div className="mt-9 flex flex-wrap items-center gap-4">
             <a
@@ -371,7 +399,7 @@ export default function Home() {
               Explore the library →
             </a>
             <a
-              href="mailto:hello@wisdomfrontiers.org"
+              href="mailto:hello@wisdom-frontiers.com"
               className="px-6 py-3 text-sm font-700 uppercase tracking-[0.12em] text-white ring-1 ring-white/40 transition-colors hover:bg-white/10"
               style={{ fontWeight: 700 }}
             >
