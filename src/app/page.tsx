@@ -75,7 +75,7 @@ const team = [
 const features = [
   {
     title: "Source Library",
-    line: "The world's largest library of translated primary sources. More than 50,000 works in over 100 languages, readable by people and AI.",
+    line: "The world's largest library of translated primary sources. More than 50,000 works in over 100 languages, readable by people and AI. Built with the Embassy of the Free Mind in Amsterdam.",
     url: "https://sourcelibrary.org",
     cta: "Enter the library",
     image: "/work/source-library.jpg",
@@ -195,7 +195,8 @@ export default function Home() {
             className={`${archivo.className} mt-8 text-2xl tracking-tight`}
             style={{ fontWeight: 800 }}
           >
-            For the children.
+            For the children.{" "}
+            <span className="text-stone-400">(We are the children.)</span>
           </p>
         </div>
       </section>
