@@ -83,6 +83,15 @@ const features = [
     who: "Derek Lomas",
   },
   {
+    title: "The Nature Library",
+    line: "A library of living things. Every plant, animal and fungus on Earth, mapped on the globe, read through the old herbals, and shelved by what they can do.",
+    url: "https://thenaturelibrary.org",
+    cta: "Open the library",
+    image: "/work/nature-library.jpg",
+    alt: "Hand-coloured plate of spiders and ants on a branch, Maria Sibylla Merian, 1705",
+    who: "Derek Lomas",
+  },
+  {
     title: "Earth Love",
     line: "Every cloud on Earth, as five weather satellites see it, ten minutes at a time, on a globe you can turn and play back.",
     url: "https://earthlove.live/globe/",
