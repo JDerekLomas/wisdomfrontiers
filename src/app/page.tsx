@@ -70,8 +70,8 @@ const team = [
   },
 ];
 
-// The three projects shown as full-width bands. Each is the circle's work;
-// `who` names the member it most reflects.
+// Projects shown as full-width bands. Each is the work of the whole circle,
+// so no band is credited to one member.
 const features = [
   {
     title: "Source Library",
@@ -80,7 +80,6 @@ const features = [
     cta: "Enter the library",
     image: "/work/source-library.jpg",
     alt: "A manuscript page in Arabic script, lit by candlelight",
-    who: "Derek Lomas",
   },
   {
     title: "The Nature Library",
@@ -89,7 +88,6 @@ const features = [
     cta: "Open the library",
     image: "/work/nature-library.jpg",
     alt: "Hand-coloured plate of spiders and ants on a branch, Maria Sibylla Merian, 1705",
-    who: "Derek Lomas",
   },
   {
     title: "Earth Love",
@@ -99,7 +97,6 @@ const features = [
     video: "/work/earthlove-globe.mp4",
     image: "/work/earthlove-globe.jpg",
     alt: "The Earth from space with live cloud cover",
-    who: "Luke Barrington",
   },
   {
     title: "TEBO 1",
@@ -108,7 +105,6 @@ const features = [
     cta: "Visit TEBO 1",
     image: "/work/tebo1.jpg",
     alt: "People in a painted cave tending an injured child by firelight",
-    who: "Albert Lin",
   },
 ];
 
@@ -250,14 +246,13 @@ export default function Home() {
                   {f.title}
                 </h2>
                 <p className="mt-5 text-lg leading-relaxed text-stone-200">{f.line}</p>
-                <div className="mt-7 flex flex-wrap items-center gap-x-6 gap-y-3">
+                <div className="mt-7">
                   <span
-                    className="px-5 py-2.5 text-sm uppercase tracking-[0.12em] text-stone-950 transition-transform group-hover:-translate-y-0.5"
+                    className="inline-block px-5 py-2.5 text-sm uppercase tracking-[0.12em] text-stone-950 transition-transform group-hover:-translate-y-0.5"
                     style={{ backgroundColor: YELLOW, fontWeight: 700 }}
                   >
                     {f.cta} →
                   </span>
-                  <span className="text-xs uppercase tracking-[0.18em] text-stone-400">{f.who}</span>
                 </div>
               </div>
             </div>
