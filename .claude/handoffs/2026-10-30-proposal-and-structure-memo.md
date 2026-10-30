@@ -29,3 +29,7 @@ Owner: Derek — accept/reject suggested edits in the proposal; decide rights/in
 - About 90 suggested edits: merged the two English parts and the two Spanish parts, grouped TAE/Intercycle/Nature under "Born at Tecoh", reframed Maya sources as Test/Ask/Correct, set Canul to $145K (total $1,985,000), broke down the team's $340K a year, added the Friedman/Kahle/Sloan prospects, and inserted the vine v3 image (https://wisdom-frontiers.com/proposal/vine-v3.png, generator scripts/vine-v3.mjs).
 - Still open: after Derek accepts, delete the empty heading and bullet paragraphs left by paragraph deletions; Derek resolves the 6 comments by hand (Chrome extension not connected); reason for the $90K by 1 Dec; who receives the money.
 - Note: wisdomfrontiers.org is a parked domain. The site is wisdom-frontiers.com.
+
+## Final cleanup (2026-10-30, after Derek accepted)
+- Direct edits: subtitle line under the title; Latin paragraph now gives the total (about 9,800 of 366,000 works, under 3%) to answer Derek's comment; vision line rewritten; the CC licence and AI-infrastructure lines merged into one paragraph; NAF line moved to Team and governance; labels (Now / By … / Hand-checked / Test …) bold with the rest plain; the Tecoh items made bullets; table header and total rows bold; sourcelibrary.org linked.
+- Left for Derek: resolve the 3 open comments by hand; say what the $90K by 1 Dec pays for; say who receives the money.
