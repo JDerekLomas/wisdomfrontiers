@@ -24,3 +24,8 @@ Owner: Derek — accept/reject suggested edits in the proposal; decide rights/in
 
 ## Tooling note
 - Google Docs MCP failed to reconnect (HTTP 404) after /login; Drive connector now points at derek@sourcelibrary.org. Proposal edits used Docs API suggest mode (writeMode SUGGEST works with replaceAllText).
+
+## Later on 2026-10-30: brevity rewrite (all as suggestions)
+- About 90 suggested edits: merged the two English parts and the two Spanish parts, grouped TAE/Intercycle/Nature under "Born at Tecoh", reframed Maya sources as Test/Ask/Correct, set Canul to $145K (total $1,985,000), broke down the team's $340K a year, added the Friedman/Kahle/Sloan prospects, and inserted the vine v3 image (https://wisdom-frontiers.com/proposal/vine-v3.png, generator scripts/vine-v3.mjs).
+- Still open: after Derek accepts, delete the empty heading and bullet paragraphs left by paragraph deletions; Derek resolves the 6 comments by hand (Chrome extension not connected); reason for the $90K by 1 Dec; who receives the money.
+- Note: wisdomfrontiers.org is a parked domain. The site is wisdom-frontiers.com.
