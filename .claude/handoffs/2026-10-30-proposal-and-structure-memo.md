@@ -40,3 +40,7 @@ Owner: #7778 | bg gap-7778 on l7a
 - The proposal's "two-thirds of every earlier translator", "~2,000 Renaissance works translated" and "7,000 years" rest on catalogues the gap paper shows undercount real translations (all-print validated ~15%, ~55K clusters vs 9,830 catalogued). Only "fewer than one in ten" is safe until #7778 posts its quotable-figures section.
 - Job gap-7778 (l7a): stage validation-found translations (no writes to translation_catalogs), audit our USTC work clustering (merge/split rates, edition-level cross-check), absolute counts, capture-corrected pace, quotable figures. Check: `ssh root@167.233.32.250 /root/bin/claude-job.sh status gap-7778`.
 - Structured numerator (MARC 041/240, Open Library, Wikidata) is #7769, two jobs live on l7a for it (possible duplicate, flagged on the issue).
+
+## Frond Studio added (2026-10-30)
+- Team and governance: new line on Frond Studio (design and strategy for Source Library; built the Embassy website), from frond-studio.com.
+- Sharing: the doc is "anyone with the link can edit". Derek shares the link with Frond himself; consider switching link access to commenter first.
