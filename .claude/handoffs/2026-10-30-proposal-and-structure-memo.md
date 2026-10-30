@@ -33,3 +33,10 @@ Owner: Derek — accept/reject suggested edits in the proposal; decide rights/in
 ## Final cleanup (2026-10-30, after Derek accepted)
 - Direct edits: subtitle line under the title; Latin paragraph now gives the total (about 9,800 of 366,000 works, under 3%) to answer Derek's comment; vision line rewritten; the CC licence and AI-infrastructure lines merged into one paragraph; NAF line moved to Team and governance; labels (Now / By … / Hand-checked / Test …) bold with the rest plain; the Tecoh items made bullets; table header and total rows bold; sourcelibrary.org linked.
 - Left for Derek: resolve the 3 open comments by hand; say what the $90K by 1 Dec pays for; say who receives the money.
+
+## Later on 2026-10-30: translation-gap figures (session "center-is-everywhere")
+Owner: #7778 | bg gap-7778 on l7a
+- Compared the Tecoh book (~/Downloads/the-center-is-everywhere.pdf) with the proposal; added the Maya sources part as suggestions (since reframed by the brevity rewrite).
+- The proposal's "two-thirds of every earlier translator", "~2,000 Renaissance works translated" and "7,000 years" rest on catalogues the gap paper shows undercount real translations (all-print validated ~15%, ~55K clusters vs 9,830 catalogued). Only "fewer than one in ten" is safe until #7778 posts its quotable-figures section.
+- Job gap-7778 (l7a): stage validation-found translations (no writes to translation_catalogs), audit our USTC work clustering (merge/split rates, edition-level cross-check), absolute counts, capture-corrected pace, quotable figures. Check: `ssh root@167.233.32.250 /root/bin/claude-job.sh status gap-7778`.
+- Structured numerator (MARC 041/240, Open Library, Wikidata) is #7769, two jobs live on l7a for it (possible duplicate, flagged on the issue).
